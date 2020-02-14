@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Smarty - Multipurpose + Admin</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/thematics-restaurant.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/brown.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="assets/images/logo2.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									
+									<li class="active"><!-- HOME -->
+										<a href="#home">
+											Accueil
+										</a>
+									</li>
+									
+									<li><!-- MENU -->
+										<ul id="topMain" class="nav nav-pills nav-onepage">
+											<li class="dropdown">
+												<a class="dropdown-toggle" href="#services">
+													MENU
+												</a>
+												<ul class="dropdown-menu">
+													<li class="dropdown">
+														<a class="toggle" href="dejeuner.html">
+															Déjeuner 
+														</a>
+													</li>
+													<li class="dropdown">
+														<a class="toggle" href="dinersouper.html">
+															Dîner &amp; Souper
+														</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									<li><!-- PORTFOLIO -->
+										<a href="gourmandises.html">
+											GOURMANDISES
+										</a>
+									</li>
+									<li><!-- PRICING -->
+										<a href="#reservation">
+											RESERVATION
+										</a>
+									</li>
+									<li><!-- BLOG -->
+										<a class="external" href="histoire.html">
+											NOTRE HISTOIRE
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+			<!-- REVOLUTION SLIDER -->
+			<div id="home" class="slider fullwidthbanner-container roundedcorners">
+				<!--
+					Navigation Styles:
+					
+						data-navigationStyle="" theme default navigation
+						
+						data-navigationStyle="preview1"
+						data-navigationStyle="preview2"
+						data-navigationStyle="preview3"
+						data-navigationStyle="preview4"
+						
+					Bottom Shadows
+						data-shadow="1"
+						data-shadow="2"
+						data-shadow="3"
+						
+					Slider Height (do not use on fullscreen mode)
+						data-height="300"
+						data-height="350"
+						data-height="400"
+						data-height="450"
+						data-height="500"
+						data-height="550"
+						data-height="600"
+						data-height="650"
+						data-height="700"
+						data-height="750"
+						data-height="800"
+				-->
+				<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview4">
+					<ul>
+						
+						<!-- SLIDE INDEX -->
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Réserver >" data-thumb="assets/images/slide1.png">
+							
+							<img src="assets/images/slide1.png" data-lazyload="assets/images/slide1.png" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+							
+							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
+							
+							<div class="tp-caption font-khausan-script customin ltl tp-resizeme large_bold_white"
+								data-x="center"
+								data-y="230"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10;">
+								La Binerie Mont-Royal
+							</div>
+
+							<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato fs-20"
+								data-x="center"
+								data-y="320"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align: center;">
+								<h4>- Depuis 1938 -</h4> 
+								<span class="block"><strong><i class="fa fa-map-marker"></i> 4167 Rue Saint-Denis, Montréal</strong></span>
+								<span class="block"><strong><i class="fa fa-phone"></i> <a href="tel:(581) 701-0303">(581) 701-0303</strong></a></span>
+								<br><a class="btn btn-default tp-resizeme" href="quote.html">RÉSERVER UNE TABLE &nbsp; <i class="fa fa-angle-right"></i></a>
+							</div>
+						</li>	
+
+						<!-- SLIDE TAKE OUT -->
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Commandes à emporter" data-thumb="assets/images/slide2.jpg">
+
+							<img src="assets/images/slide2.jpg" data-lazyload="assets/images/slide2.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+
+							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
+							
+							<a href="#reservation">
+								<div class="tp-caption font-khausan-script customin ltl tp-resizeme large_bold_white"
+									data-x="center"
+									data-y="230"
+									data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+									data-speed="800"
+									data-start="1200"
+									data-easing="easeOutQuad"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.1"
+									data-endspeed="1000"
+									data-endeasing="Power4.easeIn" style="z-index: 10;">
+									Commandes pour emporter 
+								</div>
+
+								<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato fs-20"
+								data-x="center"
+								data-y="350"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center;">
+								<h3>Maintenant disponible!</h3> <em>Ramener le bon goût du Québec à la maison</em>
+								</div>
+							</a>
+						</li>						
+
+						<!-- SLIDE DEJ -->
+						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Déjeuner" data-thumb="assets/images/slide3.jpg">
+
+							<img src="assets/images/slide3.jpg" data-lazyload="assets/images/slide3.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
+
+							<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
+							
+							<a href="/dejeuner.html">
+								<div class="tp-caption customin ltl tp-resizeme large_bold_white"
+									data-x="center"
+									data-y="230"
+									data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+									data-speed="800"
+									data-start="1200"
+									data-easing="easeOutQuad"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.1"
+									data-endspeed="1000"
+									data-endeasing="Power4.easeIn" style="z-index: 10;">
+									Petit déjeuner toute la journée!
+								</div>
+								
+								<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato fs-20"
+									data-x="center"
+									data-y="320"
+									data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+									data-speed="800"
+									data-start="1400"
+									data-easing="easeOutQuad"
+									data-splitin="none"
+									data-splitout="none"
+									data-elementdelay="0.01"
+									data-endelementdelay="0.1"
+									data-endspeed="1000"
+									data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center;">
+									<h3>Parce que déjeuner à 6 A.M c'est pas pour tout le monde.</h3><br>
+									<h6>HEURES D'OUVERTURE</h6>
+									LUNDI AU VENDREDI: 6h00 @ 23h00 / SAMEDI &amp; DIMANCHE: 7h30 @  22h00
+								</div>
+							</a>			
+						</li>
+					</ul>
+
+					<div class="tp-bannertimer"><!-- progress bar --></div>
+				</div>
+			</div>
+			<!-- /REVOLUTION SLIDER -->
+
+
+			
+			<!-- Welcome -->
+			
+			<div class="text-center mt-30 mb-70 clearfix">
+				<h1 class="font-khausan-script fs-50 fw-300 mb-0">Bine-venue à la Binerie <span>Mont-Royal</span>.</h1>
+				<h2 class="col-sm-10 offset-sm-1 mb-0 fw-400 fs-25">La Binerie Mont-Royal c'est le Québec dans votre assiette !</h2>
+			</div>
+			<br>
+			<div class="container mb-120">
+				<div class="row">
+					<div class="col-sm-4">
+						<img class="img-fluid" src="assets/images/menu.jpg" alt="img" />
+						<h3 class="mt-10">Menu</h3>
+						<p>Pour un déjeuner à toute heure, un dîner ou souper, passez à la Binerie Mont-Royal pour une cuisine traditionnelle Québécoise. Au menu: fèves au lard, tourtières, paté chinois, soupe à l'oignon, poutine... </p>
+						<a href="indexmenu.html" class="btn btn-default  mt-10">Voir le menu</a>
+					</div>
+
+					<div class="col-sm-4">
+						<img class="img-fluid" src="assets/images/team/team.jpg" alt="Lady, J-P Brunet & Philippe Brunet" />
+						<h3 class="mt-10">L'équipe</h3>
+						<p>Le 17 novembre 2005, Jocelyne et Philippe Brunet deviennent propriétaires de la Binerie Mont-Royal, restaurant unique qui offrait une cuisine et expérience authentique Québécoise. <small class="form-text text-muted">Photo: Jocelyne &amp; Philippe Brunet</small></p>
+						<a href="histoire.html" class="btn btn-default mt-10">Voir l'équipe</a>
+					</div>
+
+					<div class="col-sm-4">
+						<img class="img-fluid" src="assets/images/restraurant.jpg" alt="img" />
+						<h3 class="mt-10">La Binerie</h3>
+						<p>Fondé en 1938 par Léonide Lussier, ce restaurant fut le théâtre du roman et du film Le Matou, d'Yves Beauchemin</p>
+						<p>
+							<span class="block"><strong><i class="fa fa-phone"></i> <a href="tel:(581) 701-0303">(581) 701-0303</strong></a></span>
+							<span class="block"><strong><i class="fa fa-map-marker"></i> 4167 Rue Saint-Denis, Montréal</strong></span>
+						</p>
+						<a href="#reservation" class="btn btn-success scrollTo">RÉSERVER UNE TABLE</a>
+					</div>
+				</div>
+			</div>
+			<!-- /Welcome -->
+
+			<!-- Parallax -->
+			<section class="parallax parallax-1" style="background-image: url('assets/images/menu/paralax.png'); height: 300px;">
+				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+
+				<div class="container">
+
+					<div class="text-center">
+						<h3 class="font-khausan-script m-0 fw-300"><span>Notre Menu</span></h3>
+						<p class="font-lato fw-300 lead mt-0">DÉLICIEUSEMENT QUÉBÉCOIS</p>
+					
+						<!-- Menu Index -->
+							<div class="text-center">
+								<ul class="nav nav-pills mix-filter mb-60">
+									<li data-filter="tout" class="filter active"><a href="#">- Tout -</a></li>
+									<li data-filter="dejeuner" class="filter"><a href="#">- Déjeuner -</a></li>
+									<li data-filter="dinersouper" class="filter"><a href="#">- Dîner &amp; Souper -</a></li>
+									<li data-filter="gourmandises" class="filter"><a href="#">- Gourmandises -</a></li>
+								</ul>
+							</div>
+						<!--/ Menu Index-->
+					</div>
+
+				</div>
+			</section>
+			<!-- /Parallax -->
+
+			<!-- PORTFOLIO -->
+			<section id="work">
+				<div id="portfolio" class="portfolio">
+					<div class="row mix-grid">
+
+						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/steak.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/steak.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Deux œufs, steak parisien de 170g, fèves au lard, patates rôties, pain crouté cuit sur le poêle.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/sandwich.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/sandwich.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">To be determined </p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix dejeuner dinersouper"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/saucisses.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/saucisses.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Fèves au lard, saucisses déjeuner, rôties et café.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix dejeuner"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/deuxoeufscrepes.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/deuxoeufscrepes.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Deux oeufs, crêpe, bacon, jambon, saucisse, cretons, fèves au lard, patates rôties, pain crouté...</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/poutineviande.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/poutineviande.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Frites au four, fromage en grains St. Guillaume, sauce poutine maison et porc effiloché à l’ail.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix gourmandises"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/pudding.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/pudding.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Pudding chômeur.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix dejeuner gourmandises"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/crepes.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/crepes.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Crêpe choco-banane avec sauce au chocolat fait maison, sucre en poudre.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/poutine.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/poutine.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Poutine frites au four, fromage en grains St. Guillaume et ragoût de boulettes.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/fish.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/fish.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Fish & Chips: morue enrobé d'une légère panure cuite au four, frites santé, salade de chou, vinaigre malt, citron, sauce tartare.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix gourmandises"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/tourtiere.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/tourtiere.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Tourtière fait maison.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix  dejeuner dinersouper"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/beans.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/beans.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Bines fait maison.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+						</div><!-- /item -->
+
+						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
+							<div class="item-box">
+								<figure>
+									<ul class="list-unstyled">
+										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
+											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/macaroni.jpg" data-plugin-options='{"type":"image"}'>
+												<img class="img-fluid" src="assets/images/menu/macaroni.jpg" width="50" alt="" />
+											</a>
+											<p class="m-0 fs-12">Macaroni au fromage québécois.</p>
+										</li>
+									</ul>
+								</figure>
+							</div>
+						</div><!-- /item -->
+					</div>
+					<div class="text-center mt-40">
+						<a href="#" class="btn btn-default">VIEW DETAILED MENU</a>
+					</div>
+				</div>
+
+				
+
+			</section>
+			<!-- / MENU PORTFOLIO -->
+			
+
+			<!-- Testimonials -->
+			<section id="events" class="parallax parallax-2" style="background-image: url('assets/images/testparalax2.jpg');">
+				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+						<div class="container">
+
+							<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
+								<div class="testimonial">
+									<figure>
+										<img class="rounded" src="assets/images/jeunemathieu.jpg" alt="" />
+									</figure>
+									<div class="testimonial-content p-0">
+										<cite>
+											Personne 1
+											<span>Client satisfait</span>
+										</cite><br>
+										<p class="lead">"Un classique déjeuner Québecois fait avec amour. Toujours bien reçu.."</p>
+									</div>
+								</div>
+								<div class="testimonial">
+									<figure>
+										<img class="rounded" src="assets/images/alexgreyer.jpg" alt="" />
+									</figure>
+									<div class="testimonial-content p-0">
+										<cite>
+											Personne 2
+											<span>Wishes he could be a pure-laine - aussi satisfait</span>
+										</cite><br>
+										<p class="lead">"True Quebec diner, been around forever. Tourtier, and other pure-laine stuff.."</p>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
+			<!-- /Testimonials -->
+
+			<!-- Reservation -->
+			<section class="alternate">
+				<div class="container">
+
+					<header class="text-center mb-60 clearfix">
+						<h2 class="fw-300 mb-0"><strong>Réserver</strong> une table</h2>
+						<small class="form-text text-muted">On vous attend pour quelle heure?</small>
+					</header>
+
+					<form class="validate" action="php/contact.php" method="post" data-success="Votre table est réservée, succès!" data-toastr-position="bottom-right">
+						<div class="row">
+							<div class="col-md-4">
+								<input type="text" id="reservation_name" name="reservation_name" class="form-control required" placeholder="Nom*">
+							</div>
+
+							<div class="col-md-4">
+								<input type="email" id="reservation_email" name="reservation_email" class="form-control required" placeholder="Email*">
+							</div>
+
+							<div class="col-md-4">
+								<input type="text" id="reservation_phone" name="reservation_phone" class="form-control required" placeholder="Téléphone*">
+							</div>
+
+						</div>
+						<div class="row">
+
+							<div class="col-md-4">
+								<input type="text" id="reservation_date" name="reservation_date" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false" placeholder="Date de la réservation*">
+							</div>
+
+							<div class="col-md-4">
+								<input type="text" id="reservation_hour" name="reservation_hour" class="form-control required timepicker" placeholder="Heure*">
+							</div>
+
+							<div class="col-md-4">
+								<select id="reservation_people" name="reservation_people" class="form-control required">
+									<option value="1">1 Personne</option>
+									<option value="2" selected="selected">2 Personnes</option>
+									<option value="3">3 Personnes</option>
+									<option value="4">4 Personnes</option>
+									<option value="5">5 Personnes</option>
+									<option value="6">6 Personnes</option>
+									<option value="7">7 Personnes</option>
+									<option value="8">8 Personnes</option>
+									<option value="9">9 Personnes</option>
+									<option value="10">10 Personnes</option>
+								</select>
+							</div>
+
+						</div>
+
+						<button class="btn btn-success float-right" type="submit">RÉSERVER MA TABLE</button>
+
+					</form>
+
+				</div>
+			</section>
+			<!-- /Reservation -->
+
+
+			<!-- CONTACT -->
+				<h3 id="contact" style="text-align: center; margin-top: 50px;">CONTACTEZ-NOUS</h3>
+					
+				<!-- INFO -->
+				<div class="col-md-12 col-sm-12 text-center">
+					
+					<span class="block"><strong><i class="fa fa-phone"></i> Téléphone:</strong> <a href="tel:514.285.9078">514.285.9078</a></span>
+					<span class="block"><strong><i class="fa fa-map-marker"></i> Adresse:</strong> <a href="https://goo.gl/maps/SHZw5aGvWo9QUBws8">4167 Rue Saint-Denis, Montreal, Québec</a></span>
+					<span class="block"><strong><i class="fa fa-calendar"></i> Lundi au vendredi: 6h00 @ 23h00 / Samedi &amp; Dimanche: 7h30 @  22h00</span>
+					
+				</div>
+				<!-- /INFO -->
+
+				<hr />
+
+				<!--MAP-->
+				<div class="h-400 text-center"><iframe width="1200" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJoR7rn9EbyUwRplDrd7Jqoe8&key=AIzaSyCdGyW2D4D3w_2dNxkSwZtxE9VaGz-dKHk" allowfullscreen></iframe></div>
+				<!--/ MAP-->
+
+			<!-- /CONTACT -->
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+					<div class="row">
+						
+						<div class="col-md-8">
+
+							<!-- Footer Logo -->
+							<img class="footer-logo footer-2" src="" alt="" />
+
+							<!-- Small Description -->
+							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
+
+							<hr /> -->
+
+							<div class="row">
+								<div class="col-md-6 col-sm-6">
+
+									<!-- Newsletter Form -->
+									<p class="mb-10">Subscribe to Our <strong>Newsletter</strong></p>
+
+									<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+										<div class="input-group">
+											<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+											<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+											<span class="input-group-btn">
+												<button class="btn btn-success" type="submit">Subscribe</button>
+											</span>
+										</div>
+									</form>
+									<!-- /Newsletter Form -->
+								</div>
+
+								<div class="col-md-6 col-sm-6 hidden-xs-down">
+
+									<!-- Social Icons -->
+									<div class="ml-50 clearfix">
+
+										<p class="mb-10">Follow Us</p>
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+											<i class="icon-facebook"></i>
+											<i class="icon-facebook"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+											<i class="icon-twitter"></i>
+											<i class="icon-twitter"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+											<i class="icon-gplus"></i>
+											<i class="icon-gplus"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+											<i class="icon-linkedin"></i>
+											<i class="icon-linkedin"></i>
+										</a>
+
+										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+											<i class="icon-rss"></i>
+											<i class="icon-rss"></i>
+										</a>
+
+									</div>
+									<!-- /Social Icons -->
+
+								</div>
+								
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- <div class="copyright">
+					<div class="container">
+						<ul class="float-right m-0 list-inline mobile-block">
+							<li><a href="#">Terms &amp; Conditions</a></li>
+							<li>&bull;</li>
+							<li><a href="#">Privacy</a></li>
+						</ul>
+						&copy; All Rights Reserved, Company LTD
+					</div>
+				</div> -->
+			</footer>
+			<!-- /FOOTER -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+
+
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+		<script src="assets/js/scripts.js"></script>
+		
+		<!-- REVOLUTION SLIDER -->
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="assets/js/view/demo.revolution_slider.js"></script>
+
+		<!-- PAGELEVEL SCRIPTS -->
+		<script src="assets/js/contact.js"></script>
+
+		</script>
+	</body>
+</html>
