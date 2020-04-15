@@ -118,7 +118,7 @@ img {
 }
 
 input:-webkit-autofill {
-	color: #ffffff !important;
+	color: #a4d3ff6e !important;
 }
 
 textarea {
@@ -270,7 +270,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'Roboto',Arial,Helvetica,sans-serif;
 	font-weight:600;
 	color:#414141;
 	position: relative;
@@ -2064,7 +2064,7 @@ ul.list-icons>li>i {
 	top: 28px;
 }
 .ribbon-inner {
-	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+	font-family: "Roboto",Helvetica,Arial,sans-serif;
 
 	-webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.15);
 	   -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.15);
@@ -5440,7 +5440,7 @@ a.btn.btn-sm {
 .countTo-sm,
 .countTo-md,
 .countTo-lg {
-	font-family:'Raleway', 'Open Sans', Arial, Helvetica, sans-serif;
+	font-family:'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
 }
 .countTo-sm span.countTo {
 	margin-bottom:20px;
@@ -5490,7 +5490,7 @@ a.btn.btn-sm {
 /* Countdown */
 .countdown { 
 	display: block; 
-	font-family:'Raleway', 'Open Sans', Arial, Helvetica, sans-serif;
+	font-family:'Raleway', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .countdown-row {
@@ -6122,7 +6122,9 @@ div.heading-title {
 		display:inline-block;
 		padding-left: 0;
 		padding-right: 15px;
-		background-color: #fff;
+		background: #a4d3ff6e;
+		background:-webkit-linear-gradient(bottom, #a4d3ff6e, #ffffff);
+
 	}
 	div.heading-title.text-center h1,
 	div.heading-title.text-center h2,
@@ -6203,7 +6205,7 @@ div.heading-title.heading-border.heading-inverse {
 
 /* Dotted */
 div.heading-title.heading-dotted {
-	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAQMAAAC3/F3+AAAABlBMVEX///+QkJApn3LQAAAAAnRSTlMAgJsrThgAAAAOSURBVHheYwCCUAdcJAAnnALqo5TBzAAAAABJRU5ErkJggg==') repeat-x center;
+
 }
 section.alternate div.heading-title h1,
 section.alternate div.heading-title h2,
@@ -7623,7 +7625,7 @@ section.dark .table-striped>tbody>tr:nth-of-type(odd) {
 }
 .toast-message a,
 .toast-message label {
-  color: #ffffff;
+  color: #a4d3ff6e;
 }
 .toast-message a:hover {
   color: #cccccc;
@@ -7636,7 +7638,7 @@ section.dark .table-striped>tbody>tr:nth-of-type(odd) {
   float: right;
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
+  color: #a4d3ff6e;
   opacity: 0.8;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: alpha(opacity=80);
@@ -7718,7 +7720,7 @@ button.toast-close-button {
   border-radius: 3px 3px 3px 3px;
   background-position: 15px center;
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: #a4d3ff6e;
   opacity: 0.8;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: alpha(opacity=80);
@@ -8794,7 +8796,7 @@ div.mega-price-table .pricing-head small {
 	display:block;
 	color:rgba(255,255,255,0.7);
 	font-weight:300;
-	font-family:'Open Sans', Arial, Hevletica, sans-serif;
+	font-family:'Roboto', Arial, Hevletica, sans-serif;
 }
 
 div.mega-price-table .pricing-desc li,
@@ -9392,7 +9394,7 @@ fieldset[disabled] .datepicker table tr td.range.today.disabled:hover.active {
 .datepicker table tr td.selected:hover,
 .datepicker table tr td.selected.disabled,
 .datepicker table tr td.selected.disabled:hover {
-  color: #ffffff;
+  color: #a4d3ff6e;
   background-color: #999999;
   border-color: #555555;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -9417,7 +9419,7 @@ fieldset[disabled] .datepicker table tr td.range.today.disabled:hover.active {
 .open .dropdown-toggle.datepicker table tr td.selected:hover,
 .open .dropdown-toggle.datepicker table tr td.selected.disabled,
 .open .dropdown-toggle.datepicker table tr td.selected.disabled:hover {
-  color: #ffffff;
+  color: #a4d3ff6e;
   background-color: #858585;
   border-color: #373737;
 }
@@ -9502,7 +9504,7 @@ fieldset[disabled] .datepicker table tr td.selected.disabled:hover.active {
 .datepicker table tr td.active:hover,
 .datepicker table tr td.active.disabled,
 .datepicker table tr td.active.disabled:hover {
-  color: #ffffff;
+  color: #a4d3ff6e;
   background-color: #428bca;
   border-color: #357ebd;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -9527,7 +9529,7 @@ fieldset[disabled] .datepicker table tr td.selected.disabled:hover.active {
 .open .dropdown-toggle.datepicker table tr td.active:hover,
 .open .dropdown-toggle.datepicker table tr td.active.disabled,
 .open .dropdown-toggle.datepicker table tr td.active.disabled:hover {
-  color: #ffffff;
+  color: #a4d3ff6e;
   background-color: #3276b1;
   border-color: #285e8e;
 }
@@ -9631,7 +9633,7 @@ fieldset[disabled] .datepicker table tr td.active.disabled:hover.active {
 .datepicker table tr td span.active:hover,
 .datepicker table tr td span.active.disabled,
 .datepicker table tr td span.active.disabled:hover {
-  color: #ffffff;
+  color: #a4d3ff6e;
   background-color: #428bca;
   border-color: #357ebd;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -9656,7 +9658,7 @@ fieldset[disabled] .datepicker table tr td.active.disabled:hover.active {
 .open .dropdown-toggle.datepicker table tr td span.active:hover,
 .open .dropdown-toggle.datepicker table tr td span.active.disabled,
 .open .dropdown-toggle.datepicker table tr td span.active.disabled:hover {
-  color: #ffffff;
+  color: #a4d3ff6e;
   background-color: #3276b1;
   border-color: #285e8e;
 }
@@ -9800,7 +9802,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.active {
   display: none;
   min-width: 160px;
   list-style: none;
-  background-color: #ffffff;
+  background-color: #a4d3ff6e;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -10286,7 +10288,7 @@ section.dark .time_pick .next {
 	z-index: 999;
 }
 .time_pick input.timepicki-input {
-	background: none repeat scroll 0 0 #FFFFFF;
+	background: none repeat scroll 0 0 #a4d3ff6e;
    	border: 2px solid #ddd;
    	float: none;
    	margin: 0;
@@ -10471,8 +10473,8 @@ input.colorpicker {
     background-image: -o-linear-gradient(left, #fff, rgba(204, 154, 129, 0));
     background-image: -ms-linear-gradient(left, #fff, rgba(204, 154, 129, 0));
     background-image: linear-gradient(to right, #fff, rgba(204, 154, 129, 0));
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr=#FFFFFFFF, endColorstr=#00CC9A81)";
-    filter : progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr='#FFFFFFFF', endColorstr='#00CC9A81');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr=#a4d3ff6eFF, endColorstr=#00CC9A81)";
+    filter : progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr='#a4d3ff6eFF', endColorstr='#00CC9A81');
 }
 .sp-val {
     background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#000000), to(rgba(204, 154, 129, 0)));
@@ -11124,11 +11126,11 @@ section.dark .select2-container--default .select2-selection--single {
   border: 1px solid #aaa;
   border-radius: 4px;
   outline: 0;
-  background-image: -webkit-linear-gradient(top, #ffffff 50%, #eeeeee 100%);
-  background-image: -o-linear-gradient(top, #ffffff 50%, #eeeeee 100%);
-  background-image: linear-gradient(to bottom, #ffffff 50%, #eeeeee 100%);
+  background-image: -webkit-linear-gradient(top, #a4d3ff6e 50%, #eeeeee 100%);
+  background-image: -o-linear-gradient(top, #a4d3ff6e 50%, #eeeeee 100%);
+  background-image: linear-gradient(to bottom, #a4d3ff6e 50%, #eeeeee 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a4d3ff6e', endColorstr='#eeeeee', GradientType=0); }
   .select2-container--classic .select2-selection--single:focus {
     border: 1px solid #5897fb; }
   .select2-container--classic .select2-selection--single .select2-selection__rendered {
@@ -11190,20 +11192,20 @@ section.dark .select2-container--default .select2-selection--single {
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 50%);
-  background-image: -o-linear-gradient(top, #ffffff 0%, #eeeeee 50%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #eeeeee 50%);
+  background-image: -webkit-linear-gradient(top, #a4d3ff6e 0%, #eeeeee 50%);
+  background-image: -o-linear-gradient(top, #a4d3ff6e 0%, #eeeeee 50%);
+  background-image: linear-gradient(to bottom, #a4d3ff6e 0%, #eeeeee 50%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a4d3ff6e', endColorstr='#eeeeee', GradientType=0); }
 .select2-container--classic.select2-container--open.select2-container--below .select2-selection--single {
   border-bottom: none;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background-image: -webkit-linear-gradient(top, #eeeeee 50%, #ffffff 100%);
-  background-image: -o-linear-gradient(top, #eeeeee 50%, #ffffff 100%);
-  background-image: linear-gradient(to bottom, #eeeeee 50%, #ffffff 100%);
+  background-image: -webkit-linear-gradient(top, #eeeeee 50%, #a4d3ff6e 100%);
+  background-image: -o-linear-gradient(top, #eeeeee 50%, #a4d3ff6e 100%);
+  background-image: linear-gradient(to bottom, #eeeeee 50%, #a4d3ff6e 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0); }
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#a4d3ff6e', GradientType=0); }
 .select2-container--classic .select2-selection--multiple {
   background-color: white;
   border: 1px solid #aaa;
@@ -12073,7 +12075,7 @@ div.testimonial>figure>img {
 }
 .testimonial cite span {
 	display:block;
-	color:#888;
+	color:#fff;
 	font-size:12px;
 	font-weight:300;
 }
@@ -12192,8 +12194,8 @@ html[xmlns] .flexslider .slides {
  * ====================================================================================================================*/
 .flexslider {
   margin: 0 0 60px;
-  background: #ffffff;
-  border: 4px solid #ffffff;
+  background: #a4d3ff6e;
+  border: 4px solid #a4d3ff6e;
   position: relative;
   zoom: 1;
   -webkit-border-radius: 4px;
@@ -14281,7 +14283,7 @@ textarea.form-control {
 
 /** 50. Sky Form
 **************************************************************** **/
-.sky-form,.sky-form .badge{color:#333;text-align:left;padding:0;font-size:14px;font-weight:300}.checkbox+.checkbox,.radio+.radio{margin-top:12px}.sky-form.boxed{border:rgba(0,0,0,.1) solid}.sky-form header{margin:0;background:-webkit-linear-gradient(top,#fff 1%,#f9f9f9 98%);background:linear-gradient(to bottom,#fff 1%,#f9f9f9 98%);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;border-bottom:rgba(0,0,0,.07) 1px solid;padding:15px 20px;font-size:20px;font-weight:400}.sky-form.boxed fieldset{padding:15px}.sky-form label.captcha>img{position:absolute;top:3px;right:2px}.sky-form fieldset{display:block;padding:25px 30px 5px;border:none}.sky-form fieldset+fieldset{border-top:1px solid rgba(0,0,0,.1)}.sky-form .section,.sky-form section{padding:0;margin-bottom:20px}.sky-form footer{margin:0 15px 10px;border-top:rgba(0,0,0,.03) 1px solid}.sky-form footer:after{content:'';display:table;clear:both}.sky-form .badge{display:block;margin-bottom:6px;line-height:19px}.sky-form .badge.col{margin:0;padding-top:10px}.sky-form .note{margin-top:6px;padding:0 1px;font-size:12px;line-height:15px;color:rgba(0,0,0,.5);font-weight:400}.sky-form .button,.sky-form .checkbox,.sky-form .input,.sky-form .radio,.sky-form .select,.sky-form .textarea,.sky-form .toggle{position:relative;display:block}.sky-form .input input,.sky-form .select select,.sky-form .textarea textarea{display:block;box-sizing:border-box;-moz-box-sizing:border-box;width:100%;height:40px;padding:8px 10px;outline:0;border-width:2px;border-style:solid;border-radius:0;background:#fff;font:15px/19px 'Open Sans',Helvetica,Arial,sans-serif;color:#404040;appearance:normal;-moz-appearance:none;-webkit-appearance:none}.sky-form .col{float:left;min-height:1px;padding-right:15px;padding-left:15px;box-sizing:border-box;-moz-box-sizing:border-box}.sky-form .input-file .button{position:absolute;top:4px;right:4px;float:none;height:31px;margin:0;padding:0 20px;font-size:13px;line-height:31px}.sky-form .input-file .button:hover{box-shadow:none}.sky-form .input-file .button input{position:absolute;top:0;right:0;padding:0;font-size:30px;cursor:pointer;opacity:0}.sky-form .select i{position:absolute;top:14px;right:14px;width:5px;height:11px;background:#fff;box-shadow:0 0 0 12px #fff}.sky-form .select i:after,.sky-form .select i:before{content:'';position:absolute;right:0;border-right:4px solid transparent;border-left:4px solid transparent}.sky-form .select i:after{bottom:0;border-top:4px solid #404040}.sky-form .select i:before{top:0;border-bottom:4px solid #404040}.sky-form .select-multiple select{height:auto}.sky-form .textarea textarea{height:auto;resize:none}.sky-form .textarea-resizable textarea{resize:vertical}.sky-form .textarea-expandable textarea{height:40px}.sky-form .textarea-expandable textarea:focus{height:auto}.sky-form .checkbox,.sky-form .radio{margin-bottom:4px;padding-left:27px;font-size:15px;line-height:27px;color:#404040;cursor:pointer}.sky-form .checkbox:last-child,.sky-form .radio:last-child{margin-bottom:0}.sky-form .checkbox input,.sky-form .radio input{position:absolute;left:-9999px}.sky-form .checkbox i,.sky-form .radio i{position:absolute;top:5px;left:0;display:block;width:19px;height:19px;outline:0;border-width:2px;border-style:solid;background:#fff}.sky-form .radio i{border-radius:50%}.sky-form .checkbox input+i:after,.sky-form .radio input+i:after{position:absolute;opacity:0;transition:opacity .1s;-o-transition:opacity .1s;-ms-transition:opacity .1s;-moz-transition:opacity .1s;-webkit-transition:opacity .1s}.sky-form .radio input+i:after{content:'';top:5px;left:5px;width:5px;height:5px;border-radius:50%}.sky-form .checkbox input+i:after{content:'\f00c';top:0;left:0;width:15px;height:15px;font:400 12px/16px FontAwesome;text-align:center}.sky-form .checkbox input:checked+i:after,.sky-form .radio input:checked+i:after{opacity:1}.sky-form .inline-group{margin:0 -30px -4px 0}.sky-form .inline-group:after{content:'';display:table;clear:both}.sky-form .inline-group .checkbox,.sky-form .inline-group .radio{float:left;margin-right:30px}.sky-form .inline-group .checkbox:last-child,.sky-form .inline-group .radio:last-child{margin-bottom:4px}.sky-form .toggle{margin-bottom:4px;padding-right:61px;font-size:15px;line-height:27px;color:#404040;cursor:pointer}.sky-form .toggle:last-child{margin-bottom:0}.sky-form .toggle input{position:absolute;left:-9999px}.sky-form .toggle i{content:'';position:absolute;top:5px;right:0;display:block;width:49px;height:22px;border-width:2px;border-style:solid;border-radius:12px;background:#fff}.sky-form .toggle i:after{content:'OFF';position:absolute;top:2px;right:8px;left:8px;font-style:normal;font-size:9px;line-height:13px;font-weight:700;text-align:left;color:#5f5f5f}.sky-form .toggle i:before{content:'';position:absolute;z-index:1;top:4px;right:4px;display:block;width:9px;height:9px;border-radius:50%;opacity:1;transition:right .2s;-o-transition:right .2s;-ms-transition:right .2s;-moz-transition:right .2s;-webkit-transition:right .2s}.sky-form .toggle input:checked+i:after{content:'ON';text-align:right}.sky-form .toggle input:checked+i:before{right:33px}.sky-form .rating{margin-bottom:4px;font-size:15px;line-height:27px;color:#404040}.sky-form .rating:last-child{margin-bottom:0}.sky-form .rating input{position:absolute;left:-9999px}.sky-form .rating label{display:block;float:right;height:17px;margin-top:5px;padding:0 2px;font-size:17px;line-height:17px;cursor:pointer}.sky-form .button{float:right;height:40px;overflow:hidden;margin:10px 0 0 20px;padding:0 25px;outline:0;border:0;font:300 15px/39px 'Open Sans',Helvetica,Arial,sans-serif;text-decoration:none;color:#fff;cursor:pointer}.sky-form .btn{margin:10px 0 0 20px}.sky-form .btn:hover{margin-bottom:0}.sky-form .input-group-btn .btn{margin:0}.sky-form .tooltip{position:absolute;z-index:1;left:-9999px;padding:2px 8px 3px;font-size:11px;line-height:16px;font-weight:400;background:rgba(0,0,0,.9);color:#fff;opacity:0;transition:margin .3s,opacity .3s;-o-transition:margin .3s,opacity .3s;-ms-transition:margin .3s,opacity .3s;-moz-transition:margin .3s,opacity .3s;-webkit-transition:margin .3s,opacity .3s}.sky-form .tooltip:after{content:'';position:absolute}.sky-form .input input:focus+.tooltip,.sky-form .textarea textarea:focus+.tooltip{opacity:1}.sky-form .tooltip-top-right{bottom:100%;margin-bottom:15px}.sky-form .tooltip-top-right:after{top:100%;right:16px;border-top:4px solid rgba(0,0,0,.9);border-right:4px solid transparent;border-left:4px solid transparent}.sky-form .input input:focus+.tooltip-top-right,.sky-form .textarea textarea:focus+.tooltip-top-right{right:0;left:auto;margin-bottom:5px}.sky-form .tooltip-top-left{bottom:100%;margin-bottom:15px}.sky-form .tooltip-top-left:after{top:100%;left:16px;border-top:4px solid rgba(0,0,0,.9);border-right:4px solid transparent;border-left:4px solid transparent}.sky-form .input input:focus+.tooltip-top-left,.sky-form .textarea textarea:focus+.tooltip-top-left{right:auto;left:0;margin-bottom:5px}.sky-form .tooltip-right{top:9px;white-space:nowrap;margin-left:15px}.sky-form .tooltip-right:after{top:6px;right:100%;border-top:4px solid transparent;border-right:4px solid rgba(0,0,0,.9);border-bottom:4px solid transparent}.sky-form .input input:focus+.tooltip-right,.sky-form .textarea textarea:focus+.tooltip-right{left:100%;margin-left:5px}.sky-form .tooltip-left{top:9px;white-space:nowrap;margin-right:15px}.sky-form .tooltip-left:after{top:6px;left:100%;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:4px solid rgba(0,0,0,.9)}.sky-form .input input:focus+.tooltip-left,.sky-form .textarea textarea:focus+.tooltip-left{right:100%;left:auto;margin-right:5px}.sky-form .tooltip-bottom-right{top:100%;margin-top:15px}.sky-form .tooltip-bottom-right:after{bottom:100%;right:16px;border-right:4px solid transparent;border-bottom:4px solid rgba(0,0,0,.9);border-left:4px solid transparent}.sky-form .input input:focus+.tooltip-bottom-right,.sky-form .textarea textarea:focus+.tooltip-bottom-right{right:0;left:auto;margin-top:5px}.sky-form .tooltip-bottom-left{top:100%;margin-top:15px}.sky-form .tooltip-bottom-left:after{bottom:100%;left:16px;border-right:4px solid transparent;border-bottom:4px solid rgba(0,0,0,.9);border-left:4px solid transparent}.sky-form .input input:focus+.tooltip-bottom-left,.sky-form .textarea textarea:focus+.tooltip-bottom-left{right:auto;left:0;margin-top:5px}.sky-form .checkbox i,.sky-form .ico-append,.sky-form .ico-prepend,.sky-form .input input,.sky-form .radio i,.sky-form .select select,.sky-form .textarea textarea,.sky-form .toggle i{border-color:#e5e5e5;transition:border-color .3s;-o-transition:border-color .3s;-ms-transition:border-color .3s;-moz-transition:border-color .3s;-webkit-transition:border-color .3s}.sky-form .toggle i:before{background-color:#2da5da}.sky-form .rating label{color:#ccc;transition:color .3s;-o-transition:color .3s;-ms-transition:color .3s;-moz-transition:color .3s;-webkit-transition:color .3s}.sky-form .button{background-color:#2da5da;opacity:.8;transition:opacity .2s;-o-transition:opacity .2s;-ms-transition:opacity .2s;-moz-transition:opacity .2s;-webkit-transition:opacity .2s}.sky-form .button.button-secondary{background-color:#b3b3b3}.sky-form .ico-append,.sky-form .ico-prepend{color:#ccc}.sky-form .ico-prepend{left:5px;padding-right:3px;border-right-width:1px;border-right-style:solid}.sky-form .ico-append{right:5px;padding-left:3px;border-left-width:1px;border-left-style:solid}.sky-form .ico-append,.sky-form .ico-prepend{position:absolute;top:5px;width:29px;height:29px;font-size:15px;line-height:29px;text-align:center}.sky-form .input .ico-prepend+.ico-append+input,.sky-form .input .ico-prepend+input,.sky-form .textarea .ico-prepend+.ico-append+textarea,.sky-form .textarea .ico-prepend+textarea{padding-left:46px}.sky-form .checkbox:hover i,.sky-form .input:hover input,.sky-form .radio:hover i,.sky-form .select:hover select,.sky-form .textarea:hover textarea,.sky-form .toggle:hover i{border-color:#8dc9e5}.sky-form .rating input+label:hover,.sky-form .rating input+label:hover~label{color:#2da5da}.sky-form .button:hover{opacity:1}.sky-form .checkbox input:focus+i,.sky-form .input input:focus,.sky-form .radio input:focus+i,.sky-form .select select:focus,.sky-form .textarea textarea:focus,.sky-form .toggle input:focus+i{border-color:#2da5da}.sky-form .radio input+i:after{background-color:#2da5da}.sky-form .checkbox input+i:after{color:#2da5da}.sky-form .checkbox input:checked+i,.sky-form .radio input:checked+i,.sky-form .toggle input:checked+i{border-color:#2da5da}.sky-form .rating input:checked~label{color:#2da5da}.sky-form .checkbox.state-error i,.sky-form .radio.state-error i,.sky-form .state-error input,.sky-form .state-error select,.sky-form .state-error textarea,.sky-form .toggle.state-error i{background:#fff0f0}.sky-form .state-error select+i{background:#fff0f0;box-shadow:0 0 0 12px #fff0f0}.sky-form .toggle.state-error input:checked+i{background:#fff0f0}.sky-form .note-error{color:#fff;padding:3px;display:inline-block;background-color:#ee9393}.sky-form .checkbox.state-success i,.sky-form .radio.state-success i,.sky-form .state-success input,.sky-form .state-success select,.sky-form .state-success textarea,.sky-form .toggle.state-success i{background:#f0fff0}.sky-form .state-success select+i{background:#f0fff0;box-shadow:0 0 0 12px #f0fff0}.sky-form .toggle.state-success input:checked+i{background:#f0fff0}.sky-form .note-success{color:#fff;padding:3px;display:inline-block;background-color:#6fb679}.sky-form .button.state-disabled,.sky-form .checkbox.state-disabled,.sky-form .input.state-disabled input,.sky-form .radio.state-disabled,.sky-form .select.state-disabled,.sky-form .textarea.state-disabled,.sky-form .toggle.state-disabled{cursor:default;opacity:.5}.sky-form .checkbox.state-disabled:hover i,.sky-form .input.state-disabled:hover input,.sky-form .radio.state-disabled:hover i,.sky-form .select.state-disabled:hover select,.sky-form .textarea.state-disabled:hover textarea,.sky-form .toggle.state-disabled:hover i{border-color:#e5e5e5}
+.sky-form,.sky-form .badge{color:#333;text-align:left;padding:0;font-size:14px;font-weight:300}.checkbox+.checkbox,.radio+.radio{margin-top:12px}.sky-form.boxed{border:rgba(0,0,0,.1) solid}.sky-form header{margin:0;background:-webkit-linear-gradient(top,#fff 1%,#f9f9f9 98%);background:linear-gradient(to bottom,#fff 1%,#f9f9f9 98%);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;border-bottom:rgba(0,0,0,.07) 1px solid;padding:15px 20px;font-size:20px;font-weight:400}.sky-form.boxed fieldset{padding:15px}.sky-form label.captcha>img{position:absolute;top:3px;right:2px}.sky-form fieldset{display:block;padding:25px 30px 5px;border:none}.sky-form fieldset+fieldset{border-top:1px solid rgba(0,0,0,.1)}.sky-form .section,.sky-form section{padding:0;margin-bottom:20px}.sky-form footer{margin:0 15px 10px;border-top:rgba(0,0,0,.03) 1px solid}.sky-form footer:after{content:'';display:table;clear:both}.sky-form .badge{display:block;margin-bottom:6px;line-height:19px}.sky-form .badge.col{margin:0;padding-top:10px}.sky-form .note{margin-top:6px;padding:0 1px;font-size:12px;line-height:15px;color:rgba(0,0,0,.5);font-weight:400}.sky-form .button,.sky-form .checkbox,.sky-form .input,.sky-form .radio,.sky-form .select,.sky-form .textarea,.sky-form .toggle{position:relative;display:block}.sky-form .input input,.sky-form .select select,.sky-form .textarea textarea{display:block;box-sizing:border-box;-moz-box-sizing:border-box;width:100%;height:40px;padding:8px 10px;outline:0;border-width:2px;border-style:solid;border-radius:0;background:#fff;font:15px/19px 'Roboto',Helvetica,Arial,sans-serif;color:#404040;appearance:normal;-moz-appearance:none;-webkit-appearance:none}.sky-form .col{float:left;min-height:1px;padding-right:15px;padding-left:15px;box-sizing:border-box;-moz-box-sizing:border-box}.sky-form .input-file .button{position:absolute;top:4px;right:4px;float:none;height:31px;margin:0;padding:0 20px;font-size:13px;line-height:31px}.sky-form .input-file .button:hover{box-shadow:none}.sky-form .input-file .button input{position:absolute;top:0;right:0;padding:0;font-size:30px;cursor:pointer;opacity:0}.sky-form .select i{position:absolute;top:14px;right:14px;width:5px;height:11px;background:#fff;box-shadow:0 0 0 12px #fff}.sky-form .select i:after,.sky-form .select i:before{content:'';position:absolute;right:0;border-right:4px solid transparent;border-left:4px solid transparent}.sky-form .select i:after{bottom:0;border-top:4px solid #404040}.sky-form .select i:before{top:0;border-bottom:4px solid #404040}.sky-form .select-multiple select{height:auto}.sky-form .textarea textarea{height:auto;resize:none}.sky-form .textarea-resizable textarea{resize:vertical}.sky-form .textarea-expandable textarea{height:40px}.sky-form .textarea-expandable textarea:focus{height:auto}.sky-form .checkbox,.sky-form .radio{margin-bottom:4px;padding-left:27px;font-size:15px;line-height:27px;color:#404040;cursor:pointer}.sky-form .checkbox:last-child,.sky-form .radio:last-child{margin-bottom:0}.sky-form .checkbox input,.sky-form .radio input{position:absolute;left:-9999px}.sky-form .checkbox i,.sky-form .radio i{position:absolute;top:5px;left:0;display:block;width:19px;height:19px;outline:0;border-width:2px;border-style:solid;background:#fff}.sky-form .radio i{border-radius:50%}.sky-form .checkbox input+i:after,.sky-form .radio input+i:after{position:absolute;opacity:0;transition:opacity .1s;-o-transition:opacity .1s;-ms-transition:opacity .1s;-moz-transition:opacity .1s;-webkit-transition:opacity .1s}.sky-form .radio input+i:after{content:'';top:5px;left:5px;width:5px;height:5px;border-radius:50%}.sky-form .checkbox input+i:after{content:'\f00c';top:0;left:0;width:15px;height:15px;font:400 12px/16px FontAwesome;text-align:center}.sky-form .checkbox input:checked+i:after,.sky-form .radio input:checked+i:after{opacity:1}.sky-form .inline-group{margin:0 -30px -4px 0}.sky-form .inline-group:after{content:'';display:table;clear:both}.sky-form .inline-group .checkbox,.sky-form .inline-group .radio{float:left;margin-right:30px}.sky-form .inline-group .checkbox:last-child,.sky-form .inline-group .radio:last-child{margin-bottom:4px}.sky-form .toggle{margin-bottom:4px;padding-right:61px;font-size:15px;line-height:27px;color:#404040;cursor:pointer}.sky-form .toggle:last-child{margin-bottom:0}.sky-form .toggle input{position:absolute;left:-9999px}.sky-form .toggle i{content:'';position:absolute;top:5px;right:0;display:block;width:49px;height:22px;border-width:2px;border-style:solid;border-radius:12px;background:#fff}.sky-form .toggle i:after{content:'OFF';position:absolute;top:2px;right:8px;left:8px;font-style:normal;font-size:9px;line-height:13px;font-weight:700;text-align:left;color:#5f5f5f}.sky-form .toggle i:before{content:'';position:absolute;z-index:1;top:4px;right:4px;display:block;width:9px;height:9px;border-radius:50%;opacity:1;transition:right .2s;-o-transition:right .2s;-ms-transition:right .2s;-moz-transition:right .2s;-webkit-transition:right .2s}.sky-form .toggle input:checked+i:after{content:'ON';text-align:right}.sky-form .toggle input:checked+i:before{right:33px}.sky-form .rating{margin-bottom:4px;font-size:15px;line-height:27px;color:#404040}.sky-form .rating:last-child{margin-bottom:0}.sky-form .rating input{position:absolute;left:-9999px}.sky-form .rating label{display:block;float:right;height:17px;margin-top:5px;padding:0 2px;font-size:17px;line-height:17px;cursor:pointer}.sky-form .button{float:right;height:40px;overflow:hidden;margin:10px 0 0 20px;padding:0 25px;outline:0;border:0;font:300 15px/39px 'Roboto',Helvetica,Arial,sans-serif;text-decoration:none;color:#fff;cursor:pointer}.sky-form .btn{margin:10px 0 0 20px}.sky-form .btn:hover{margin-bottom:0}.sky-form .input-group-btn .btn{margin:0}.sky-form .tooltip{position:absolute;z-index:1;left:-9999px;padding:2px 8px 3px;font-size:11px;line-height:16px;font-weight:400;background:rgba(0,0,0,.9);color:#fff;opacity:0;transition:margin .3s,opacity .3s;-o-transition:margin .3s,opacity .3s;-ms-transition:margin .3s,opacity .3s;-moz-transition:margin .3s,opacity .3s;-webkit-transition:margin .3s,opacity .3s}.sky-form .tooltip:after{content:'';position:absolute}.sky-form .input input:focus+.tooltip,.sky-form .textarea textarea:focus+.tooltip{opacity:1}.sky-form .tooltip-top-right{bottom:100%;margin-bottom:15px}.sky-form .tooltip-top-right:after{top:100%;right:16px;border-top:4px solid rgba(0,0,0,.9);border-right:4px solid transparent;border-left:4px solid transparent}.sky-form .input input:focus+.tooltip-top-right,.sky-form .textarea textarea:focus+.tooltip-top-right{right:0;left:auto;margin-bottom:5px}.sky-form .tooltip-top-left{bottom:100%;margin-bottom:15px}.sky-form .tooltip-top-left:after{top:100%;left:16px;border-top:4px solid rgba(0,0,0,.9);border-right:4px solid transparent;border-left:4px solid transparent}.sky-form .input input:focus+.tooltip-top-left,.sky-form .textarea textarea:focus+.tooltip-top-left{right:auto;left:0;margin-bottom:5px}.sky-form .tooltip-right{top:9px;white-space:nowrap;margin-left:15px}.sky-form .tooltip-right:after{top:6px;right:100%;border-top:4px solid transparent;border-right:4px solid rgba(0,0,0,.9);border-bottom:4px solid transparent}.sky-form .input input:focus+.tooltip-right,.sky-form .textarea textarea:focus+.tooltip-right{left:100%;margin-left:5px}.sky-form .tooltip-left{top:9px;white-space:nowrap;margin-right:15px}.sky-form .tooltip-left:after{top:6px;left:100%;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:4px solid rgba(0,0,0,.9)}.sky-form .input input:focus+.tooltip-left,.sky-form .textarea textarea:focus+.tooltip-left{right:100%;left:auto;margin-right:5px}.sky-form .tooltip-bottom-right{top:100%;margin-top:15px}.sky-form .tooltip-bottom-right:after{bottom:100%;right:16px;border-right:4px solid transparent;border-bottom:4px solid rgba(0,0,0,.9);border-left:4px solid transparent}.sky-form .input input:focus+.tooltip-bottom-right,.sky-form .textarea textarea:focus+.tooltip-bottom-right{right:0;left:auto;margin-top:5px}.sky-form .tooltip-bottom-left{top:100%;margin-top:15px}.sky-form .tooltip-bottom-left:after{bottom:100%;left:16px;border-right:4px solid transparent;border-bottom:4px solid rgba(0,0,0,.9);border-left:4px solid transparent}.sky-form .input input:focus+.tooltip-bottom-left,.sky-form .textarea textarea:focus+.tooltip-bottom-left{right:auto;left:0;margin-top:5px}.sky-form .checkbox i,.sky-form .ico-append,.sky-form .ico-prepend,.sky-form .input input,.sky-form .radio i,.sky-form .select select,.sky-form .textarea textarea,.sky-form .toggle i{border-color:#e5e5e5;transition:border-color .3s;-o-transition:border-color .3s;-ms-transition:border-color .3s;-moz-transition:border-color .3s;-webkit-transition:border-color .3s}.sky-form .toggle i:before{background-color:#2da5da}.sky-form .rating label{color:#ccc;transition:color .3s;-o-transition:color .3s;-ms-transition:color .3s;-moz-transition:color .3s;-webkit-transition:color .3s}.sky-form .button{background-color:#2da5da;opacity:.8;transition:opacity .2s;-o-transition:opacity .2s;-ms-transition:opacity .2s;-moz-transition:opacity .2s;-webkit-transition:opacity .2s}.sky-form .button.button-secondary{background-color:#b3b3b3}.sky-form .ico-append,.sky-form .ico-prepend{color:#ccc}.sky-form .ico-prepend{left:5px;padding-right:3px;border-right-width:1px;border-right-style:solid}.sky-form .ico-append{right:5px;padding-left:3px;border-left-width:1px;border-left-style:solid}.sky-form .ico-append,.sky-form .ico-prepend{position:absolute;top:5px;width:29px;height:29px;font-size:15px;line-height:29px;text-align:center}.sky-form .input .ico-prepend+.ico-append+input,.sky-form .input .ico-prepend+input,.sky-form .textarea .ico-prepend+.ico-append+textarea,.sky-form .textarea .ico-prepend+textarea{padding-left:46px}.sky-form .checkbox:hover i,.sky-form .input:hover input,.sky-form .radio:hover i,.sky-form .select:hover select,.sky-form .textarea:hover textarea,.sky-form .toggle:hover i{border-color:#8dc9e5}.sky-form .rating input+label:hover,.sky-form .rating input+label:hover~label{color:#2da5da}.sky-form .button:hover{opacity:1}.sky-form .checkbox input:focus+i,.sky-form .input input:focus,.sky-form .radio input:focus+i,.sky-form .select select:focus,.sky-form .textarea textarea:focus,.sky-form .toggle input:focus+i{border-color:#2da5da}.sky-form .radio input+i:after{background-color:#2da5da}.sky-form .checkbox input+i:after{color:#2da5da}.sky-form .checkbox input:checked+i,.sky-form .radio input:checked+i,.sky-form .toggle input:checked+i{border-color:#2da5da}.sky-form .rating input:checked~label{color:#2da5da}.sky-form .checkbox.state-error i,.sky-form .radio.state-error i,.sky-form .state-error input,.sky-form .state-error select,.sky-form .state-error textarea,.sky-form .toggle.state-error i{background:#fff0f0}.sky-form .state-error select+i{background:#fff0f0;box-shadow:0 0 0 12px #fff0f0}.sky-form .toggle.state-error input:checked+i{background:#fff0f0}.sky-form .note-error{color:#fff;padding:3px;display:inline-block;background-color:#ee9393}.sky-form .checkbox.state-success i,.sky-form .radio.state-success i,.sky-form .state-success input,.sky-form .state-success select,.sky-form .state-success textarea,.sky-form .toggle.state-success i{background:#f0fff0}.sky-form .state-success select+i{background:#f0fff0;box-shadow:0 0 0 12px #f0fff0}.sky-form .toggle.state-success input:checked+i{background:#f0fff0}.sky-form .note-success{color:#fff;padding:3px;display:inline-block;background-color:#6fb679}.sky-form .button.state-disabled,.sky-form .checkbox.state-disabled,.sky-form .input.state-disabled input,.sky-form .radio.state-disabled,.sky-form .select.state-disabled,.sky-form .textarea.state-disabled,.sky-form .toggle.state-disabled{cursor:default;opacity:.5}.sky-form .checkbox.state-disabled:hover i,.sky-form .input.state-disabled:hover input,.sky-form .radio.state-disabled:hover i,.sky-form .select.state-disabled:hover select,.sky-form .textarea.state-disabled:hover textarea,.sky-form .toggle.state-disabled:hover i{border-color:#e5e5e5}
 .sky-form.boxed {
   border: rgba(0,0,0,0.1) 1px solid;
 }
