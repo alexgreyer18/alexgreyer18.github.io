@@ -865,7 +865,7 @@ h6 > span {
 .h-250        { height:250px !important; }
 .h-300        { height:300px !important; }
 .h-350        { height:350px !important; }
-.h-400        { height:278px !important; }
+.h-400        { height:400px !important; }
 .h-450        { height:450px !important; }
 .h-500        { height:500px !important; }
 .h-550        { height:550px !important; }
@@ -1094,7 +1094,7 @@ section.dark .border-bottom-3 {
 .border-bottom-dashed:before {
 	content: "";
 	display: block;
-	width: 98%;
+	width: 100%;
 	height: 1px;
 	position: absolute;
 	bottom: -6px;
@@ -2651,6 +2651,7 @@ section .nav-pills>li>a:focus,
 section .nav-pills>li.active>a, 
 section .nav-pills>li.active>a:hover, 
 section .nav-pills>li.active>a:focus {
+	background-color:rgba(0,0,0,0.1) !important;
 }
 section .nav-pills>li>a {
 	padding:6px 15px;
@@ -7323,7 +7324,7 @@ h6 .badge {
 section .nav-pills>li>a,
 section .nav-pills>li.active>a:hover,
 section .nav-pills>li.active>a {
-	color:rgb(255, 255, 255);
+	color:#111;
 }
 
 section.dark .nav-pills>li>a,

@@ -16,18 +16,16 @@
 		<!-- CORE CSS -->
 		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-		<!-- REVOLUTION SLIDER -->
-		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
-		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+		<!-- SWIPER SLIDER -->
+		<link href="assets/plugins/slider.swiper/dist/css/swiper.min.css" rel="stylesheet" type="text/css" />
 
 		<!-- THEME CSS -->
 		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/thematics-restaurant.css" rel="stylesheet" type="text/css" />
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/brown.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
 	<!--
@@ -53,7 +51,9 @@
 	-->
 	<body class="smoothscroll enable-animation">
 
-		
+		<!-- wrapper -->
+		<div id="wrapper">
+
 			<!-- 
 				AVAILABLE HEADER CLASSES
 
@@ -80,11 +80,61 @@
 
 				Example Usage:  class="clearfix sticky header-sm transparent b-0"
 			-->
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+			<div id="header" class="navbar-toggleable-md sticky transparent header-sm clearfix">
+				<!-- Top Bar -->
+			<div id="topBar">
+				<div class="container">
+
+					<!-- right -->
+					<ul class="top-links list-inline float-right">
+						<li class="text-welcome hidden-xs-down">Welcome to FoodShopper, <strong>Benjamin</strong></li>
+						<li>
+							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><i class="fa fa-user hidden-xs-down"></i> MY ACCOUNT</a>
+							<ul class="dropdown-menu float-right">
+								<li><a tabindex="-1" href="#"><i class="fa fa-history"></i> ORDER HISTORY</a></li>
+								<li class="divider"></li>
+								<li><a tabindex="-1" href="#"><i class="fa fa-bookmark"></i> MY WISHLIST</a></li>
+								<li><a tabindex="-1" href="#"><i class="fa fa-edit"></i> MY REVIEWS</a></li>
+								<li><a tabindex="-1" href="#"><i class="fa fa-cog"></i> MY SETTINGS</a></li>
+								<li class="divider"></li>
+								<li><a tabindex="-1" href="#"><i class="glyphicon glyphicon-off"></i> LOGOUT</a></li>
+							</ul>
+						</li>
+						<li class="hidden-xs-down"><a href="page-login-1.html">LOGIN</a></li>
+						<li class="hidden-xs-down"><a href="page-register-1.html">REGISTER</a></li>
+					</ul>
+
+					<!-- left -->
+					<ul class="top-links list-inline">
+						<li class="hidden-xs-down"><a href="page-faq-1.html">FAQ</a></li>
+						<li>
+							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/us.png" width="16" height="11" alt="lang" /> ENGLISH</a>
+							<ul class="dropdown-langs dropdown-menu">
+								<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/us.png" width="16" height="11" alt="lang" /> ENGLISH</a></li>
+								<li class="divider"></li>
+								<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/de.png" width="16" height="11" alt="lang" /> GERMAN</a></li>
+								<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/ru.png" width="16" height="11" alt="lang" /> RUSSIAN</a></li>
+								<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/it.png" width="16" height="11" alt="lang" /> ITALIAN</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#">USD</a>
+							<ul class="dropdown-langs dropdown-menu">
+								<li><a tabindex="-1" href="#">USD</a></li>
+								<li class="divider"></li>
+								<li><a tabindex="-1" href="#">EUR</a></li>
+								<li><a tabindex="-1" href="#">GBP</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- /Top Bar -->
 
 				<!-- TOP NAV -->
 				<header id="topNav">
-					<div class="container">
+					<div class="full-container">
 
 						<!-- Mobile Menu Button -->
 						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
@@ -92,8 +142,8 @@
 						</button>
 
 						<!-- Logo -->
-						<a class="logo float-left scrollTo" href="#top">
-							<img src="assets/images/logo2.png" alt="" />
+						<a class="logo float-left" href="index.html">
+							<img src="assets/images/_smarty/logo_dark.png" alt="" />
 						</a>
 
 						<!-- 
@@ -105,60 +155,61 @@
 						<div class="navbar-collapse collapse float-right nav-main-collapse">
 							<nav class="nav-main">
 
-								<!-- 
-									.nav-onepage
-									Required for onepage navigation links
+								<!--
+									NOTE
 									
-									Add .external for an external link!
-								-->
-								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									
-									<li class="active"><!-- HOME -->
-										<a href="#home">
-											Accueil
-										</a>
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
 									</li>
-									
-									<li><!-- MENU -->
-										<ul id="topMain" class="nav nav-pills nav-onepage">
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main">
+									<li class="dropdown"><!-- HOME -->
+										<a class="dropdown-toggle" href="#">
+											HOME
+										</a>
+										<ul class="dropdown-menu">
 											<li class="dropdown">
-												<a class="dropdown-toggle" href="#services">
-													MENU
+												<a class="dropdown-toggle" href="#">
+													HOME CORPORATE
 												</a>
 												<ul class="dropdown-menu">
-													<li class="dropdown">
-														<a class="toggle" href="dejeuner.html">
-															Déjeuner 
-														</a>
-													</li>
-													<li class="dropdown">
-														<a class="toggle" href="dinersouper.html">
-															Dîner &amp; Souper
-														</a>
-													</li>
-												</ul>
+													<li><a href="index-corporate-1.html">CORPORATE LAYOUT 1</a></li>
+													</ul>
 											</li>
 										</ul>
-									<li><!-- PORTFOLIO -->
-										<a href="gourmandises.html">
-											GOURMANDISES
+									</li>
+									<li class="dropdown"><!-- PAGES -->
+										<a class="dropdown-toggle" href="#">
+											PAGES
 										</a>
 									</li>
-									<li><!-- PRICING -->
-										<a href="#reservation">
-											RESERVATION
+									<li class="dropdown active"><!-- FEATURES -->
+										<a class="dropdown-toggle" href="#">
+											FEATURES
 										</a>
 									</li>
-									<li><!-- BLOG -->
-										<a class="external" href="histoire.html">
-											NOTRE HISTOIRE
-										</a>
-									</li>
-									<li><!-- CONTACT -->
-										<a href="#contact">
-											CONTACT
-										</a>
-									</li>
+
+
+
+									<!-- 
+										MENU ANIMATIONS
+											.nav-animate-fadeIn
+											.nav-animate-fadeInUp
+											.nav-animate-bounceIn
+											.nav-animate-bounceInUp
+											.nav-animate-flipInX
+											.nav-animate-flipInY
+											.nav-animate-zoomIn
+											.nav-animate-slideInUp
+
+											.nav-hover-animate 		= animate text on hover
+
+											.hover-animate-bounceIn = bounceIn effect on mouse over of main menu
+									-->
+								
 								</ul>
 
 							</nav>
@@ -167,656 +218,446 @@
 					</div>
 				</header>
 				<!-- /Top Nav -->
+				
 
 			</div>
 
 
-			<!-- REVOLUTION SLIDER -->
-			<div id="home" class="slider fullwidthbanner-container roundedcorners">
+
+
+			<!-- 
+				SLIDER
+
+				Classes:
+					.fullheight = full height slider
+			-->
+			<section id="slider" class="fullheight">
+
 				<!--
-					Navigation Styles:
+					SWIPPER SLIDER PARAMS
 					
-						data-navigationStyle="" theme default navigation
-						
-						data-navigationStyle="preview1"
-						data-navigationStyle="preview2"
-						data-navigationStyle="preview3"
-						data-navigationStyle="preview4"
-						
-					Bottom Shadows
-						data-shadow="1"
-						data-shadow="2"
-						data-shadow="3"
-						
-					Slider Height (do not use on fullscreen mode)
-						data-height="300"
-						data-height="350"
-						data-height="400"
-						data-height="450"
-						data-height="500"
-						data-height="550"
-						data-height="600"
-						data-height="650"
-						data-height="700"
-						data-height="750"
-						data-height="800"
+					data-effect="slide|fade|coverflow"
+					data-autoplay="2500|false" 						(remove to disable autoplay)
 				-->
-				<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview4">
-					<ul>
-						
-						<!-- SLIDE INDEX -->
-						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Réserver >" data-thumb="assets/images/slide1.png">
-							
-							<img src="assets/images/slide1.png" data-lazyload="assets/images/slide1.png" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
-							
-							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
-							
-							<div class="tp-caption font-khausan-script customin ltl tp-resizeme large_bold_white"
-								data-x="center"
-								data-y="230"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1200"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10;">
-								La Binerie Mont-Royal
-							</div>
+				<div class="swiper-container" data-effect="slide" data-autoplay="false">
+					<div class="swiper-wrapper">
 
-							<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato fs-20"
-								data-x="center"
-								data-y="320"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1400"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align: center;">
-								<h4>- Depuis 1938 -</h4> 
-								<span class="block"><strong><i class="fa fa-map-marker"></i> 4167 Rue Saint-Denis, Montréal</strong></span>
-								<span class="block"><strong><i class="fa fa-phone"></i> <a href="tel:(514) 285-9078">(514) 285-9078</strong></a></span>
-								<br><a class="btn btn-default tp-resizeme" href="quote.html">RÉSERVER UNE TABLE &nbsp; <i class="fa fa-angle-right"></i></a>
-							</div>
-						</li>	
-
-						<!-- SLIDE TAKE OUT -->
-						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Commandes à emporter" data-thumb="assets/images/slide2.jpg">
-
-							<img src="assets/images/slide2.jpg" data-lazyload="assets/images/slide2.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
-
-							<div class="overlay dark-3"><!-- dark overlay [1 to 9 opacity] --></div>
-							
-							<a href="#reservation">
-								<div class="tp-caption font-khausan-script customin ltl tp-resizeme large_bold_white"
-									data-x="center"
-									data-y="230"
-									data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-									data-speed="800"
-									data-start="1200"
-									data-easing="easeOutQuad"
-									data-splitin="none"
-									data-splitout="none"
-									data-elementdelay="0.01"
-									data-endelementdelay="0.1"
-									data-endspeed="1000"
-									data-endeasing="Power4.easeIn" style="z-index: 10;">
-									Commandes pour emporter 
-								</div>
-
-								<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato fs-20"
-								data-x="center"
-								data-y="350"
-								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="800"
-								data-start="1400"
-								data-easing="easeOutQuad"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.01"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center;">
-								<h3>Maintenant disponible!</h3> <em>Ramener le bon goût du Québec à la maison</em>
-								</div>
-							</a>
-						</li>						
-
-						<!-- SLIDE DEJ -->
-						<li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Déjeuner" data-thumb="assets/images/slide3.jpg">
-
-							<img src="assets/images/slide3.jpg" data-lazyload="assets/images/slide3.jpg" alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" />
-
+						<!-- SLIDE 1 -->
+						<div class="swiper-slide" style="background-image: url('assets/images/grocery_index.jpg');">
 							<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
 							
-							<a href="/dejeuner.html">
-								<div class="tp-caption customin ltl tp-resizeme large_bold_white"
-									data-x="center"
-									data-y="230"
-									data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-									data-speed="800"
-									data-start="1200"
-									data-easing="easeOutQuad"
-									data-splitin="none"
-									data-splitout="none"
-									data-elementdelay="0.01"
-									data-endelementdelay="0.1"
-									data-endspeed="1000"
-									data-endeasing="Power4.easeIn" style="z-index: 10;">
-									Petit déjeuner toute la journée!
+							<div class="display-table">
+								<div class="display-table-cell vertical-align-middle">
+									<div class="container">
+
+										<div class="row">
+											<div class="text-center col-md-8 col-12 offset-md-2">
+
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">WELCOME TO FOODSHOPPER</h1>
+												<p class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s">Stay home, stay safe, let me do the groceries for you.</p>
+												<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.5s" href="#">PURCHASE NOW</a>
+
+											</div>
+										</div>
+							
+									</div>
 								</div>
-								
-								<div class="tp-caption customin ltl tp-resizeme small_light_white font-lato fs-20"
-									data-x="center"
-									data-y="320"
-									data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-									data-speed="800"
-									data-start="1400"
-									data-easing="easeOutQuad"
-									data-splitin="none"
-									data-splitout="none"
-									data-elementdelay="0.01"
-									data-endelementdelay="0.1"
-									data-endspeed="1000"
-									data-endeasing="Power4.easeIn" style="z-index: 10; width: 100%; max-width: 750px; white-space: normal; text-align:center;">
-									<h3>Parce que déjeuner à 6 A.M c'est pas pour tout le monde.</h3><br>
-									<h6>HEURES D'OUVERTURE</h6>
-									LUNDI AU VENDREDI: 6h00 @ 23h00 / SAMEDI &amp; DIMANCHE: 7h30 @  22h00
-								</div>
-							</a>			
+							</div>
+							
+						</div>
+						<!-- /SLIDE 1 -->
+
+					</div>
+				</div>
+					
+			</section>
+			<!-- /SLIDER -->
+
+			<!-- -->
+			<section>
+				<div class="container">
+				
+					<div class="heading-title text-center mb-80">
+						<h3>How Does It Work?</h3>
+					</div>
+					<ul class="process-steps nav nav-justified">
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="icon-shopping-cart"></i></a>
+							<h5>Shop Cart</h5>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#"><i class="icon-pencil"></i></a>
+							<h5>Review Cart</h5>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="icon-ok"></i></a>
+							<h5>Finish</h5>
+						</li>
+					</ul>
+					
+					<ul class="process-steps nav nav-justified text-left">
+						<li class="nav-item">
+							<a class="ico-light ico-lg ico-rounded ico-hover et-profile-female" href="#step1" data-toggle="tab">1</a>
+							<h5>Shop Cart</h5>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#step2" data-toggle="tab">2</a>
+							<h5>Review Cart</h5>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#step3" data-toggle="tab">3</a>
+							<h5>Checkout</h5>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#step4" data-toggle="tab">4</a>
+							<h5>Payment</h5>
 						</li>
 					</ul>
 
-					<div class="tp-bannertimer"><!-- progress bar --></div>
+					<div class="tab-content mt-60">
+						<div role="tabpanel" class="tab-pane active" id="step1">
+							<h4>Shop Cart</h4>
+							Heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+						</div>
+
+						<div role="tabpanel" class="tab-pane" id="step2">
+							<h4>Review Cart</h4>
+							Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+						</div>
+
+						<div role="tabpanel" class="tab-pane" id="step3">
+							<h4>Checkout</h4>
+							Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+						</div>
+
+						<div role="tabpanel" class="tab-pane" id="step4">
+							<h4>Payment</h4>
+							Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+						</div>
+					</div>
+
+<!-- pre code -->
+<div class="text-left mt-20">
+	<a href="javascript:;" onclick="jQuery('#pre-0').slideToggle();">Show Code</a>
+</div>
+<pre id="pre-0" class="text-left rad-0 text-danger hide">
+&lt;ul class="process-steps nav nav-tabs nav-justified text-left"&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link active" href="#step1" data-toggle="tab"&gt;1&lt;/a&gt;
+		&lt;h5&gt;Shop Cart&lt;/h5&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" href="#step2" data-toggle="tab"&gt;2&lt;/a&gt;
+		&lt;h5&gt;Review Cart&lt;/h5&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" href="#step3" data-toggle="tab"&gt;3&lt;/a&gt;
+		&lt;h5&gt;Checkout&lt;/h5&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" href="#step4" data-toggle="tab"&gt;4&lt;/a&gt;
+		&lt;h5&gt;Payment&lt;/h5&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content mt-60"&gt;
+	&lt;div role="tabpanel" class="tab-pane active" id="step1"&gt;
+		&lt;h4&gt;Shop Cart&lt;/h4&gt;
+		Heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+	&lt;/div&gt;
+
+	&lt;div role="tabpanel" class="tab-pane" id="step2"&gt;
+		&lt;h4&gt;Review Cart&lt;/h4&gt;
+		Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+	&lt;/div&gt;
+
+	&lt;div role="tabpanel" class="tab-pane" id="step3"&gt;
+		&lt;h4&gt;Checkout&lt;/h4&gt;
+		Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+	&lt;/div&gt;
+
+	&lt;div role="tabpanel" class="tab-pane" id="step4"&gt;
+		&lt;h4&gt;Payment&lt;/h4&gt;
+		Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<!-- /pre code -->
+
 				</div>
-			</div>
-			<!-- /REVOLUTION SLIDER -->
+			</section>
+			<!-- / -->
 
+			<div class="container">
 
-			
-			<!-- Welcome -->
-			
-			<div class="text-center mt-30 mb-70 clearfix">
-				<h1 class="font-khausan-script fs-50 fw-300 mb-0">Bine-venue à la Binerie <span>Mont-Royal</span>.</h1>
-				<h2 class="col-sm-10 offset-sm-1 mb-0 fw-400 fs-25">La Binerie Mont-Royal c'est le Québec dans votre assiette !</h2>
-			</div>
-			<br>
-			<div class="container mb-120">
+				<div class="heading-title heading-line-single text-center">
+					<h3>Clean 3 Columns</h3>
+				</div>
+
 				<div class="row">
-					<div class="col-sm-4">
-						<img class="img-fluid" src="assets/images/menu.jpg" alt="img" />
-						<h3 class="mt-10">Menu</h3>
-						<p>Pour un déjeuner à toute heure, un dîner ou souper, passez à la Binerie Mont-Royal pour une cuisine traditionnelle Québécoise. Au menu: fèves au lard, tourtières, paté chinois, soupe à l'oignon, poutine... </p>
-						<a href="indexmenu.html" class="btn btn-default  mt-10">Voir le menu</a>
+
+					<div class="col-md-4 col-sm-4">
+						
+						<div class="price-clean">                                
+							<h4>
+								<sup>$</sup>15<em>/month</em>
+							</h4>
+							<h5> STARTER </h5>
+							<hr />
+							<p>For individuals looking for something simple to get started.</p>
+							<hr />
+							<a href="#" class="btn btn-3d btn-teal">Learn More</a>
+						</div>
+					
 					</div>
 
-					<div class="col-sm-4">
-						<img class="img-fluid" src="assets/images/team/team.jpg" alt="Lady, J-P Brunet & Philippe Brunet" />
-						<h3 class="mt-10">L'équipe</h3>
-						<p>Le 17 novembre 2005, Jocelyne et Philippe Brunet deviennent propriétaires de la Binerie Mont-Royal, restaurant unique qui offrait une cuisine et expérience authentique Québécoise. <small class="form-text text-muted">Photo: Jocelyne &amp; Philippe Brunet</small></p>
-						<a href="histoire.html" class="btn btn-default mt-10">Voir l'équipe</a>
+					<div class="col-md-4 col-sm-4">
+						
+						<div class="price-clean price-clean-popular">
+							<div class="ribbon"> 
+								<div class="ribbon-inner">POPULAR</div>
+							</div>
+							<h4>
+								<sup>$</sup>25<em>/month</em>
+							</h4>
+							<h5> BUSINESS </h5>
+							<hr />
+							<p>For individuals looking for something simple to get started.</p>
+							<hr />
+							<a href="#" class="btn btn-3d btn-primary">Learn More</a>
+						</div>
+					
 					</div>
 
-					<div class="col-sm-4">
-						<img class="img-fluid" src="assets/images/restraurant.jpg" alt="img" />
-						<h3 class="mt-10">La Binerie</h3>
-						<p>Fondé en 1938 par Léonide Lussier, ce restaurant fut le théâtre du roman et du film Le Matou, d'Yves Beauchemin</p>
-						<p>
-							<span class="block"><strong><i class="fa fa-phone"></i> <a href="tel:(514) 285-9078">(514) 285-9078</strong></a></span>
-							<span class="block"><strong><i class="fa fa-map-marker"></i> 4167 Rue Saint-Denis, Montréal</strong></span>
-						</p>
-						<a href="#reservation" class="btn btn-success scrollTo">RÉSERVER UNE TABLE</a>
+					<div class="col-md-4 col-sm-4">
+						
+						<div class="price-clean">                                
+							<h4>
+								<sup>$</sup>35<em>/month</em>
+							</h4>
+							<h5> DEVELOPER </h5>
+							<hr />
+							<p>For individuals looking for something simple to get started.</p>
+							<hr />
+							<a href="#" class="btn btn-3d btn-teal">Learn More</a>
+						</div>
+					
 					</div>
+
 				</div>
 			</div>
-			<!-- /Welcome -->
+		</div>
 
-			<!-- Parallax -->
-			<section class="parallax parallax-1" style="background-image: url('assets/images/menu/paralax.png'); height: 300px;">
-				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
+		<section class="b-0 alternate">
+			<div class="container">
 
-				<div class="container">
+				<div class="row">
+					<div class="col-sm-8 offset-sm-2">
 
-					<div class="text-center">
-						<h3 class="font-khausan-script m-0 fw-300"><span>Notre Menu</span></h3>
-						<p class="font-lato fw-300 lead mt-0">DÉLICIEUSEMENT QUÉBÉCOIS</p>
-					
-						<!-- Menu Index -->
-							<div class="text-center">
-								<ul class="nav nav-pills mix-filter mb-60">
-									<li data-filter="tout" class="filter active"><a href="#">- Tout -</a></li>
-									<li data-filter="dejeuner" class="filter"><a href="#">- Déjeuner -</a></li>
-									<li data-filter="dinersouper" class="filter"><a href="#">- Dîner &amp; Souper -</a></li>
-									<li data-filter="gourmandises" class="filter"><a href="#">- Gourmandises -</a></li>
-								</ul>
-							</div>
-						<!--/ Menu Index-->
-					</div>
+						<div class="alert alert-light b-0">
 
-				</div>
-			</section>
-			<!-- /Parallax -->
+							<h2 class="fs-30 fw-400 text-center mb-0">DROP US A LINE OR JUST SAY HELLO</h2>
+							
+							<hr>
+							
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+							</p>
 
-			<!-- PORTFOLIO -->
-			<section id="work">
-				<div id="portfolio" class="portfolio">
-					<div class="row mix-grid">
+							<hr>
 
-						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/steak.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/steak.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Deux œufs, steak parisien de 170g, fèves au lard, patates rôties, pain crouté cuit sur le poêle.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
 
-						</div><!-- /item -->
+							<div class="block">
 
-						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/sandwich.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/sandwich.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">To be determined </p>
-										</li>
-									</ul>
-								</figure>
-							</div>
 
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix dejeuner dinersouper"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/saucisses.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/saucisses.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Fèves au lard, saucisses déjeuner, rôties et café.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix dejeuner"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/deuxoeufscrepes.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/deuxoeufscrepes.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Deux oeufs, crêpe, bacon, jambon, saucisse, cretons, fèves au lard, patates rôties, pain crouté...</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/poutineviande.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/poutineviande.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Frites au four, fromage en grains St. Guillaume, sauce poutine maison et porc effiloché à l’ail.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix gourmandises"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/pudding.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/pudding.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Pudding chômeur.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix dejeuner gourmandises"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/crepes.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/crepes.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Crêpe choco-banane avec sauce au chocolat fait maison, sucre en poudre.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/poutine.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/poutine.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Poutine frites au four, fromage en grains St. Guillaume et ragoût de boulettes.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/fish.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/fish.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Fish & Chips: morue enrobé d'une légère panure cuite au four, frites santé, salade de chou, vinaigre malt, citron, sauce tartare.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix gourmandises"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/tourtiere.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/tourtiere.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Tourtière fait maison.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix  dejeuner dinersouper"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/beans.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/beans.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Bines fait maison.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-						</div><!-- /item -->
-
-						<div class="col-md-4 col-sm-4 mix dinersouper"><!-- item -->
-							<div class="item-box">
-								<figure>
-									<ul class="list-unstyled">
-										<li class="restaurant-menu-item border-bottom-dashed relative clearfix mb-10">
-											<a class="float-left thumbnail mb-0 lightbox" href="assets/images/menu/macaroni.jpg" data-plugin-options='{"type":"image"}'>
-												<img class="img-fluid" src="assets/images/menu/macaroni.jpg" width="50" alt="" />
-											</a>
-											<p class="m-0 fs-12">Macaroni au fromage québécois.</p>
-										</li>
-									</ul>
-								</figure>
-							</div>
-						</div><!-- /item -->
-					</div>
-					<div class="text-center mt-40">
-						<a href="#" class="btn btn-default">VIEW DETAILED MENU</a>
-					</div>
-				</div>
-
-				
-
-			</section>
-			<!-- / MENU PORTFOLIO -->
-			
-
-			<!-- Testimonials -->
-			<section id="events" class="parallax parallax-2" style="background-image: url('assets/images/testparalax2.jpg');">
-				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
-						<div class="container">
-
-							<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
-								<div class="testimonial">
-									<figure>
-										<img class="rounded" src="assets/images/jeunemathieu.jpg" alt="" />
-									</figure>
-									<div class="testimonial-content p-0">
-										<cite>
-											Personne 1
-											<span>Client satisfait</span>
-										</cite><br>
-										<p class="lead">"Un classique déjeuner Québecois fait avec amour. Toujours bien reçu.."</p>
-									</div>
-								</div>
-								<div class="testimonial">
-									<figure>
-										<img class="rounded" src="assets/images/alexgreyer.jpg" alt="" />
-									</figure>
-									<div class="testimonial-content p-0">
-										<cite>
-											Personne 2
-											<span>Wishes he could be a pure-laine - aussi satisfait</span>
-										</cite><br>
-										<p class="lead">"True Quebec diner, been around forever. Tourtier, and other pure-laine stuff.."</p>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
-			</section>
-			<!-- /Testimonials -->
-
-			<!-- Reservation -->
-			<section class="alternate">
-				<div class="container">
-
-					<header class="text-center mb-60 clearfix">
-						<h2 class="fw-300 mb-0"><strong>Réserver</strong> une table</h2>
-						<small class="form-text text-muted">On vous attend pour quelle heure?</small>
-					</header>
-
-					<form class="validate" action="php/contact.php" method="post" data-success="Votre table est réservée, succès!" data-toastr-position="bottom-right">
-						<div class="row">
-							<div class="col-md-4">
-								<input type="text" id="reservation_name" name="reservation_name" class="form-control required" placeholder="Nom*">
-							</div>
-
-							<div class="col-md-4">
-								<input type="email" id="reservation_email" name="reservation_email" class="form-control required" placeholder="Email*">
-							</div>
-
-							<div class="col-md-4">
-								<input type="text" id="reservation_phone" name="reservation_phone" class="form-control required" placeholder="Téléphone*">
-							</div>
-
-						</div>
-						<div class="row">
-
-							<div class="col-md-4">
-								<input type="text" id="reservation_date" name="reservation_date" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false" placeholder="Date de la réservation*">
-							</div>
-
-							<div class="col-md-4">
-								<input type="text" id="reservation_hour" name="reservation_hour" class="form-control required timepicker" placeholder="Heure*">
-							</div>
-
-							<div class="col-md-4">
-								<select id="reservation_people" name="reservation_people" class="form-control required">
-									<option value="1">1 Personne</option>
-									<option value="2" selected="selected">2 Personnes</option>
-									<option value="3">3 Personnes</option>
-									<option value="4">4 Personnes</option>
-									<option value="5">5 Personnes</option>
-									<option value="6">6 Personnes</option>
-									<option value="7">7 Personnes</option>
-									<option value="8">8 Personnes</option>
-									<option value="9">9 Personnes</option>
-									<option value="10">10 Personnes</option>
-								</select>
-							</div>
-
-						</div>
-
-						<button class="btn btn-success float-right" type="submit">RÉSERVER MA TABLE</button>
-
-					</form>
-
-				</div>
-			</section>
-			<!-- /Reservation -->
-
-
-			<!-- CONTACT -->
-				<h3 id="contact" style="text-align: center; margin-top: 50px;">CONTACTEZ-NOUS</h3>
-					
-				<!-- INFO -->
-				<div class="col-md-12 col-sm-12 text-center">
-					
-					<span class="block"><strong><i class="fa fa-phone"></i> Téléphone:</strong> <a href="tel:514.285.9078">514.285.9078</a></span>
-					<span class="block"><strong><i class="fa fa-map-marker"></i> Adresse:</strong> <a href="https://goo.gl/maps/SHZw5aGvWo9QUBws8">4167 Rue Saint-Denis, Montreal, Québec</a></span>
-					<span class="block"><strong><i class="fa fa-calendar"></i> Lundi au vendredi: 6h00 @ 23h00 / Samedi &amp; Dimanche: 7h30 @  22h00</span>
-					
-				</div>
-				<!-- /INFO -->
-
-				<hr />
-
-				<!--MAP-->
-				<div class="h-400 text-center"><iframe width="1200" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJoR7rn9EbyUwRplDrd7Jqoe8&key=AIzaSyCdGyW2D4D3w_2dNxkSwZtxE9VaGz-dKHk" allowfullscreen></iframe></div>
-				<!--/ MAP-->
-
-			<!-- /CONTACT -->
-
-			<!-- FOOTER -->
-			<footer id="footer">
-				<div class="container">
-
-					<div class="row">
-						
-						<div class="col-md-8">
-
-							<!-- Footer Logo -->
-							<img class="footer-logo footer-2" src="" alt="" />
-
-							<!-- Small Description -->
-							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
-
-							<hr /> -->
-
-							<div class="row">
-								<div class="col-md-6 col-sm-6">
-
-									<!-- Newsletter Form -->
-									<p class="mb-10">Subscribe to Our <strong>Newsletter</strong></p>
-
-									<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
-										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-											<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-											<span class="input-group-btn">
-												<button class="btn btn-success" type="submit">Subscribe</button>
-											</span>
-										</div>
-									</form>
-									<!-- /Newsletter Form -->
-								</div>
-
-								<div class="col-md-6 col-sm-6 hidden-xs-down">
-
-									<!-- Social Icons -->
-									<div class="ml-50 clearfix">
-
-										<p class="mb-10">Follow Us</p>
-										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
-											<i class="icon-facebook"></i>
-											<i class="icon-facebook"></i>
-										</a>
-
-										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
-											<i class="icon-twitter"></i>
-											<i class="icon-twitter"></i>
-										</a>
-
-										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
-											<i class="icon-gplus"></i>
-											<i class="icon-gplus"></i>
-										</a>
-
-										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
-											<i class="icon-linkedin"></i>
-											<i class="icon-linkedin"></i>
-										</a>
-
-										<a href="#" class="social-icon social-icon-sm social-icon-transparent social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
-											<i class="icon-rss"></i>
-											<i class="icon-rss"></i>
-										</a>
-
-									</div>
-									<!-- /Social Icons -->
-
-								</div>
 								
+								<!--
+									MESSAGES
+									
+										How it works?
+										The form data is posted to php/contact.php where the fields are verified!
+										php.contact.php will redirect back here and will add a hash to the end of the URL:
+											#alert_success 		= email sent
+											#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+											#alert_mandatory	= email not sent - required fields empty
+											Hashes are handled by assets/js/contact.js
+
+										Form data: required to be an array. Example:
+											contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+											Also, add `required` to input fields if is a mandatory field. 
+											Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+
+										PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+													 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+										WARNING! Do not change the `email` and `name`!
+													contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+													contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+								-->
+
+								<!-- Alert Success -->
+								<div id="alert_success" class="alert alert-success mb-30">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<strong>Thank You!</strong> Your message successfully sent!
+								</div><!-- /Alert Success -->
+
+
+								<!-- Alert Failed -->
+								<div id="alert_failed" class="alert alert-danger mb-30">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<strong>[SMTP] Error!</strong> Internal server error!
+								</div><!-- /Alert Failed -->
+
+
+								<!-- Alert Mandatory -->
+								<div id="alert_mandatory" class="alert alert-danger mb-30">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+								</div><!-- /Alert Mandatory -->
+
+
+								<form action="php/contact.php" method="post" enctype="multipart/form-data">
+									<fieldset>
+										<input type="hidden" name="action" value="contact_send" />
+
+										<div class="row">
+											<div class="col-md-6">
+												<label for="contact:name">Full Name *</label>
+												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+											</div>
+											<div class="col-md-6">
+												<label for="contact:email">E-mail Address *</label>
+												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+											</div>
+											<div class="col-md-12">
+												<label for="contact:phone">Phone</label>
+												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+											</div>
+
+											<div class="col-md-12">
+												<label for="contact:subject">Subject *</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+											</div>
+
+											<div class="col-md-12">
+												<label for="contact:message">Message *</label>
+												<textarea required maxlength="10000" rows="6" class="form-control" name="contact[message]" id="contact:message"></textarea>
+											</div>
+										</div>
+
+									</fieldset>
+
+									<div class="row">
+										<div class="col-md-12">
+											<button type="submit" class="btn btn-primary btn-v1"><i class="fa fa-check"></i> SEND MESSAGE</button>
+										</div>
+									</div>
+								</form>
+
+
 							</div>
 
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<div class="container">
+
+				<div class="row">
+					
+					<div class="col-md-8">
+
+						<!-- Footer Logo -->
+						<img class="footer-logo footer-2" src="" alt="" />
+
+						<!-- Small Description -->
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque.</p>
+
+						<hr /> -->
+
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+
+								<!-- Newsletter Form -->
+								<p class="mb-10">Subscribe to Our <strong>Newsletter</strong></p>
+
+								<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+										<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+										<span class="input-group-btn">
+											<button class="btn btn-success" type="submit">Subscribe</button>
+										</span>
+									</div>
+								</form>
+								<!-- /Newsletter Form -->
+							</div>
+
+							<div class="col-md-6 col-sm-6 hidden-xs-down">
+
+								<!-- Social Icons -->
+								<div class="ml-50 clearfix">
+
+									<p class="mb-10">Follow Us</p>
+									<a href="#" class="social-icon social-icon-sm social-icon-transparent social-facebook float-left" data-toggle="tooltip" data-placement="top" title="Facebook">
+										<i class="icon-facebook"></i>
+										<i class="icon-facebook"></i>
+									</a>
+
+									<a href="#" class="social-icon social-icon-sm social-icon-transparent social-twitter float-left" data-toggle="tooltip" data-placement="top" title="Twitter">
+										<i class="icon-twitter"></i>
+										<i class="icon-twitter"></i>
+									</a>
+
+									<a href="#" class="social-icon social-icon-sm social-icon-transparent social-gplus float-left" data-toggle="tooltip" data-placement="top" title="Google plus">
+										<i class="icon-gplus"></i>
+										<i class="icon-gplus"></i>
+									</a>
+
+									<a href="#" class="social-icon social-icon-sm social-icon-transparent social-linkedin float-left" data-toggle="tooltip" data-placement="top" title="Linkedin">
+										<i class="icon-linkedin"></i>
+										<i class="icon-linkedin"></i>
+									</a>
+
+									<a href="#" class="social-icon social-icon-sm social-icon-transparent social-rss float-left" data-toggle="tooltip" data-placement="top" title="Rss">
+										<i class="icon-rss"></i>
+										<i class="icon-rss"></i>
+									</a>
+
+								</div>
+								<!-- /Social Icons -->
+
+							</div>
+							
 						</div>
 
 					</div>
 
 				</div>
 
-				<!-- <div class="copyright">
-					<div class="container">
-						<ul class="float-right m-0 list-inline mobile-block">
-							<li><a href="#">Terms &amp; Conditions</a></li>
-							<li>&bull;</li>
-							<li><a href="#">Privacy</a></li>
-						</ul>
-						&copy; All Rights Reserved, Company LTD
-					</div>
-				</div> -->
-			</footer>
-			<!-- /FOOTER -->
+			</div>
+
+			<!-- <div class="copyright">
+				<div class="container">
+					<ul class="float-right m-0 list-inline mobile-block">
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li>&bull;</li>
+						<li><a href="#">Privacy</a></li>
+					</ul>
+					&copy; All Rights Reserved, Company LTD
+				</div>
+			</div> -->
+		</footer>
+		<!-- /FOOTER -->
+
+		
+		<!-- /wrapper -->
 
 
 		<!-- SCROLL TO TOP -->
@@ -837,14 +678,11 @@
 
 		<script src="assets/js/scripts.js"></script>
 		
-		<!-- REVOLUTION SLIDER -->
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
-		<script src="assets/js/view/demo.revolution_slider.js"></script>
+		<!-- STYLESWITCHER - REMOVE -->
+		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
 
-		<!-- PAGELEVEL SCRIPTS -->
-		<script src="assets/js/contact.js"></script>
-
-		</script>
+		<!-- SWIPER SLIDER -->
+		<script src="assets/plugins/slider.swiper/dist/js/swiper.min.js"></script>
+		<script src="assets/js/view/demo.swiper_slider.js"></script>
 	</body>
 </html>

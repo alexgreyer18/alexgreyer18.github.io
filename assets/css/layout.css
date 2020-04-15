@@ -5,7 +5,6 @@
 
 	TABLE CONTENTS
 	-------------------------------
-		Lists
 		Globals
 		Boxed
 		Color Background
@@ -50,22 +49,8 @@
 		DEMO ONLY [remove on production]
 *************************************************** **/
 
-/** Lists
- **************************************************************** **/
 
-  /* Style the buttons */
-  .btn {
-	outline: none;
-	cursor: pointer;
-	margin-right: 35px;
-	text-decoration: #FFF;
-  }
-  
-  /* Add a light grey background on mouse-over */
-  .btn:hover {
-	background-color: rgba(255, 255, 255, 0.199);
-  }
-  
+
 /** Globals
  **************************************************************** **/
 html, body {
@@ -73,7 +58,7 @@ html, body {
 	direction: ltr;
 }
 body {
-	color:rgb(77, 73, 73);
+	color:#666;
 	background-color:#fff;
 	font-family:'Open Sans',Arial,Helvetica,sans-serif;
 	-webkit-font-smoothing: antialiased;
