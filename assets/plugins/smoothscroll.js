@@ -334,8 +334,8 @@
 					deltaY *= options.stepSize / 120;
 				}
 
-				// scrollArray(overflowing, -deltaX, -deltaY);
-				// eve?nt.preventDefault();
+				scrollArray(overflowing, -deltaX, -deltaY);
+				event.preventDefault();
 			}
 
 			/**
@@ -405,8 +405,8 @@
 						return true; // a key we don't care about
 				}
 
-				// scrollArray(elem, x, y);
-				// event.preventDefault();
+				scrollArray(elem, x, y);
+				event.preventDefault();
 			}
 
 			/**

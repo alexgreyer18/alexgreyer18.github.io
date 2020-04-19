@@ -2,10 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Rocket Elevators</title>
-		<link rel="icon" href="assets/images/logos/R2tab.png">
+		<title>FoodShopper</title>
+		<link rel="icon" href="assets/images/FoodShopperBadge.png">
 		<meta name="description" content="" />
-		<meta name="Author" content="Kevin Giglio" />
+		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -17,17 +17,16 @@
 		<!-- CORE CSS -->
 		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-		<!-- REVOLUTION SLIDER -->
-		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
-		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+		<!-- SWIPER SLIDER -->
+		<link href="assets/plugins/slider.swiper/dist/css/swiper.min.css" rel="stylesheet" type="text/css" />
 
 		<!-- THEME CSS -->
 		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
-
+		<link href="assets/css/plugin-hover-buttons.css" rel="stylesheet" type="text/css" />
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/lightgrey.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
 	</head>
 
 	<!--
@@ -49,6 +48,7 @@
 		menu-vertical-hide		= hidden, open on click
 		
 		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
 	-->
 	<body class="smoothscroll enable-animation">
 
@@ -81,11 +81,51 @@
 
 				Example Usage:  class="clearfix sticky header-sm transparent b-0"
 			-->
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+			<div id="header" class="navbar-toggleable-md sticky transparent header-sm clearfix">
+				<!-- Top Bar -->
+				<div id="topBar">
+					<div>
+
+						<!-- right -->
+						<ul class="top-links list-inline float-right">
+							<li class="text-welcome hidden-xs-down">Welcome to FoodShopper, <strong>Benjamin</strong></li>
+							<li>
+								<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#" ><i class="fa fa-user hidden-xs-down"></i> MY ACCOUNT</a>
+								<ul class="dropdown-menu float-right">
+									<li><a tabindex="-1" href="#"><i class="fa fa-history"></i> ORDER HISTORY</a></li>
+									<li class="divider"></li>
+									<li><a tabindex="-1" href="#"><i class="fa fa-bookmark"></i> MY WISHLIST</a></li>
+									<li><a tabindex="-1" href="#"><i class="fa fa-edit"></i> MY REVIEWS</a></li>
+									<li><a tabindex="-1" href="#"><i class="fa fa-cog"></i> MY SETTINGS</a></li>
+									<li class="divider"></li>
+									<li><a tabindex="-1" href="#"><i class="glyphicon glyphicon-off"></i> LOGOUT</a></li>
+								</ul>
+							</li>
+							<li class="hidden-xs-down"><a href="assets/login.html">LOGIN</a></li>
+							<li class="hidden-xs-down"><a href="page-register-1.html">REGISTER</a></li>
+						</ul>
+
+						<!-- left -->
+						<ul class="top-links list-inline">
+							<li class="hidden-xs-down"><a href="page-faq-1.html">FAQ</a></li>
+							<li>
+								<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/ca.png" width="16" height="11" alt="lang" /> ENGLISH</a>
+								<ul class="dropdown-langs dropdown-menu">
+									<li class="divider"></li>
+									<!-- <li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/it.png" width="16" height="11" alt="lang" /> ITALIAN</a></li> -->
+									<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/ca.png" width="16" height="11" alt="lang" /> FRANÇAIS</a></li>
+								</ul>
+							</li>
+							
+						</ul>
+
+					</div>
+				</div>
+				<!-- /Top Bar -->
 
 				<!-- TOP NAV -->
 				<header id="topNav">
-					<div class="container">
+					<div class="full-container">
 
 						<!-- Mobile Menu Button -->
 						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
@@ -93,8 +133,8 @@
 						</button>
 
 						<!-- Logo -->
-						<a class="logo float-left scrollTo" href="#top">
-							<img src="assets/images/logos/R2.png" alt="Rocket Elevators logo" style="padding-top:4px; padding-bottom:4px;" />
+						<a class="logo float-left" href="index.html">
+							<img src="assets/images/FoodShopperBadge.png" alt="" />
 						</a>
 
 						<!-- 
@@ -103,65 +143,35 @@
 							AVAILABLE CLASSES:
 							submenu-dark = dark sub menu
 						-->
-						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+						<div class="navbar-collapse collapse float-right nav-main-collapse">
 							<nav class="nav-main">
 
-								<!-- 
-									.nav-onepage
-									Required for onepage navigation links
+								<!--
+									NOTE
 									
-									Add .external for an external link!
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
 								-->
-								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
-									<li class="active"><!-- HOME -->
-										<a href="#top">
+								<ul id="topMain" class="nav nav-pills nav-main">
+									<li class="dropdown"><!-- HOME -->
+										<a class="dropdown-toggle" href="#">
 											HOME
 										</a>
 									</li>
-
-									<li><!-- SERVICES -->
-									<ul id="topMain" class="nav nav-pills nav-onepage">
-										<li class="dropdown">
-											<a class="dropdown-toggle" href="#services">
-												SERVICES
-											</a>
-											<ul class="dropdown-menu">
-												<li class="dropdown">
-													<a class="toggle" href="corporate-services.html">
-														Corporate Services
-													</a>
-												</li>
-												<li class="dropdown">
-													<a class="toggle" href="residential-services.html">
-														Residential Services
-													</a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-
-									<li><!-- WORK -->
-										<a href="work.html">
-											WORK
+									<li class="dropdown"><!-- PLANS -->
+										<a class="dropdown-toggle" href="#pricing">
+											PRICING
 										</a>
 									</li>
-									<li><!-- NEWS -->
-										<a href="#news">
-											NEWS
+									<li class="dropdown"><!-- FORM -->
+										<a class="dropdown-toggle" href="#form">
+											DELIVERY FORM
 										</a>
 									</li>
-									
-									<li><!-- CLIENTS -->
-										<a href="#clients">
-											CLIENTS
-										</a>
-									</li>
-									<li><!-- CONTACT -->
-										<a href="#contactinf">
-											CONTACT
-										</a>
-									</li>
-									<a class="btn btn-light btn-outline-dark tp-resizeme" href="quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 								</ul>
 
 							</nav>
@@ -170,831 +180,224 @@
 					</div>
 				</header>
 				<!-- /Top Nav -->
+				
 
 			</div>
 
+			<!-- 
+				SLIDER
 
+				Classes:
+					.fullheight = full height slider
+			-->
+			<section id="slider" class="fullheight">
 
-			<!-- REVOLUTION SLIDER -->
-			<div class="slider fullwidthbanner-container roundedcorners">
 				<!--
-					Navigation Styles:
+					SWIPPER SLIDER PARAMS
 					
-						data-navigationStyle="" theme default navigation
-						
-						data-navigationStyle="preview1"
-						data-navigationStyle="preview2"
-						data-navigationStyle="preview3"
-						data-navigationStyle="preview4"
-						
-					Bottom Shadows
-						data-shadow="1"
-						data-shadow="2"
-						data-shadow="3"
-						
-					Slider Height (do not use on fullscreen mode)
-						data-height="300"
-						data-height="350"
-						data-height="400"
-						data-height="450"
-						data-height="500"
-						data-height="550"
-						data-height="600"
-						data-height="650"
-						data-height="700"
-						data-height="750"
-						data-height="800"
+					data-effect="slide|fade|coverflow"
+					data-autoplay="2500|false" 						(remove to disable autoplay)
 				-->
-				<div class="fullscreenbanner" data-navigationStyle="preview4">
-					<ul class="hide">
-					
-						<!-- SLIDE  -->
-						<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"  data-saveperformance="off"  data-title="Safe. Elegant. Durable.">
-							<!-- MAIN IMAGE -->
-							<img src="assets/images/since1976.jpg" data-lazyload="assets/images/since1976.jpg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+				<div class="swiper-container" data-effect="slide" data-autoplay="false">
+					<div class="swiper-wrapper">
 
-							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
-							<div class="tp-caption white_big skewfromleft tp-resizeme"
-								data-x="30"
-								data-y="100" 
-								data-speed="400"
-								data-start="1500"
-								data-easing="Power3.easeInOut"
-								data-splitin="words"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="400"
-								
-								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
-									Safe. Elegant. Durable.
-									
-							</div>
+						<!-- SLIDE 1 -->
+						<div class="swiper-slide" style="background-image: url('assets/images/grocery_index.jpg');">
+							<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
 							
+							<div class="display-table">
+								<div class="display-table-cell vertical-align-middle">
+									<div class="container">
+
+										<div class="row">
+											<div class="text-center col-md-8 col-12 offset-md-2">
+
+												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">WELCOME TO FOODSHOPPER</h1>
+												<p class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s">Stay home, stay safe, let me do the groceries for you.</p>
+												<a class="btn btn-default btn-lg wow fadeIn hvr-icon-down" data-wow-delay="1.5s" href="#steps">SEE HOW IT WORKS</a>
+												
+											</div>
+										</div>
 							
-							<div class="tp-caption content_text_center skewfromleft tp-resizeme"
-								data-x="30"
-								data-y="195" 
-								data-speed="500"
-								data-start="2000"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="600"
-								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
-									Best elevators in North America since 1976.
 									</div>
-
-							<div class="tp-caption skewfromleft tp-resizeme"
-								data-x="30"
-								data-y="275" 
-								data-speed="300"
-								data-start="2500"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="300"
-								style="z-index: 5; max-width: auto; max-height: auto; white-space: normal;">
-								<a class="btn btn-default tp-resizeme" href="#services">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+								</div>
 							</div>
 							
-							<div class="tp-caption sft tp-resizeme"
-								data-x="250"
-								data-y="275" 
-								data-speed="300"
-								data-start="2500"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="300"
-								style="z-index: 6; max-width: auto; max-height: auto; white-space: normal;">
-								<a class="btn btn-default tp-resizeme" href="quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
-							</div>
+						</div>
+						<!-- /SLIDE 1 -->
 
+					</div>
+				</div>
+					
+			</section>
+			<!-- /SLIDER -->
+
+			<!-- -->
+			<section id="steps">
+				<div class="container">
+				
+					<!-- <div class="heading-title text-center mb-80">
+						<h3>How Does It Work?</h3>
+					</div> -->
+					<!-- <ul class="process-steps nav nav-justified">
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="icon-shopping-cart"></i></a>
+							<h5>Shop</h5>
 						</li>
-
-						<!-- SLIDE  -->
-						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Residential Elevators">
-							<!-- MAIN IMAGE -->
-							<img src="assets/images/panel2.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-
-							<div class="overlay dark-5"><!-- dark overlay [0 to 9 opacity] --></div>
-
-							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
-								data-x="30"
-								data-y="100" 
-								data-speed="500"
-								data-start="1500"
-								data-easing="Cubic.easeOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="500"
-								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
-									Quiet Residential Elevators.
-							</div>
-
-							<div class="tp-caption skewfromrightshort tp-resizeme"
-								data-x="30"
-								data-y="195" 
-								data-speed="500"
-								data-start="1000"
-								data-easing="easeInCirc"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="500"
-								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
-									No need to sacrifice the peacefulness of your home for comfort.
-							</div>
-
-							<div class="tp-caption sfb tp-resizeme"
-								data-x="30"
-								data-y="275" 
-								data-speed="500"
-								data-start="1500"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="500"
-								style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
-									<a class="btn btn-default btn-lg" href="residential-services.html">RESIDENTIAL SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
-							</div>
+						<li class="nav-item">
+							<a class="nav-link active" href="#"><i class="icon-pencil"></i></a>
+							<h5>Review Cart</h5>
 						</li>
-
-						<!-- SLIDE  -->
-						<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" data-title="Corporate Elevators">
-							<!-- MAIN IMAGE -->
-							<img src="assets/images/panel1.jpeg" alt="cover image"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-
-							<div class="overlay dark-4"><!-- dark overlay [0 to 9 opacity] --></div>
-
-							<div class="tp-caption font-roboto skewfromleft tp-resizeme"
-								data-x="30"
-								data-y="100" 
-								data-speed="500"
-								data-start="1500"
-								data-easing="Cubic.easeOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="500"
-								style="z-index: 2; color:#fff; font-size:65px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:none;">
-									Commercial or Industrial.
-							</div>
-
-							<div class="tp-caption skewfromrightshort tp-resizeme"
-								data-x="30"
-								data-y="195" 
-								data-speed="500"
-								data-start="1000"
-								data-easing="easeInCirc"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="500"
-								style="z-index: 3; font-size:20px; color:#fff; font-weight:300; text-shadow:none;">
-								Whatever your needs are, we have the perfect team for the job.
-							</div>
-
-							<div class="tp-caption sfb tp-resizeme"
-								data-x="30"
-								data-y="275" 
-								data-speed="500"
-								data-start="1500"
-								data-easing="Power3.easeIn"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="1"
-								data-endelementdelay="0.1"
-								data-endspeed="500"
-								style="z-index: 4; max-width: auto;">
-									<a class="btn btn-default btn-lg" href="corporate-services.html">CORPORATE SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
-							</div>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="icon-ok"></i></a>
+							<h5>Finish</h5>
 						</li>
-
+					</ul> -->
+					
+					<ul class="process-steps nav nav-justified text-left">
+						<li class="nav-item">
+							<a class="ico-light ico-lg ico-rounded ico-hover" href="#step1" data-toggle="tab">1</a>
+							<h5>Fill out a Grocery Delivery Form.</h5>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#step2" data-toggle="tab">2</a>
+							<h5>Proceed to checkout.</h5>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#step3" data-toggle="tab">3</a>
+							<h5>Sit back & relax while I do the shopping for you!</h5>
+						</li>
 					</ul>
 
+					<div class="tab-content mt-60">
+						<div role="tabpanel" class="tab-pane active" id="step1">
+							<h4>Order Grocery</h4>
+							Select desired grocery items, preferred brands, budget and delivery time preference through the form below or contact me through email. 
+							</br> Delivery timeframes are from 7h30AM to 10h30AM, 1h30PM to 4h30PM and 6h30PM to 9h30PM. </br></br><p style="font-style: italic;">In need of an express emergency delivery? 
+							Text the phone number below!</p>
+						</div>
+
+						<div role="tabpanel" class="tab-pane" id="step2">
+							<h4>Review Your Cart</h4>
+							Payment can be made through interac transfer or cash. Credit card payments comming soon.
+						</div>
+
+						<div role="tabpanel" class="tab-pane" id="step3">
+							<h4>Receive your order at the specified delivery time of your choice!</h4>
+							Your order is on the way at the specified time of your choice.
+						</div>
+					</div>
+
 				</div>
-			</div>
-			<!-- /REVOLUTION SLIDER -->
+			</section>
+			<!-- / -->
 
+			<section style="background:url('assets/images/mockup2.jpg')">
+				<div class="container" id="pricing">
 
-			<!-- Services -->
-			<section id="services">
-				<div class="container">
+					<div class="heading-title heading-line-single text-center">
+						<h3>Pricing</h3>
+					</div>
+
 					<div class="row">
+
+						<div class="col-md-4 col-sm-4">
+							
+							<div class="price-clean">                                
+								<h4>
+									<sup>$</sup>40<em>/delivery</em>
+								</h4>
+								<h5> No Subscription </h5>
+								<hr />
+								<h4>
+									<sup>$</sup>25<em>/delivery</em>
+								</h4>
+								<h5> ELDERLY & DISABLED PERSON</h5>
+								<hr />
+								<p>Same day delivery.</p>
+								<hr />
+								<p>Choose a delivery period: AM or PM.</p>
+								<hr />
+								<a href="#" class="btn btn-3d btn-teal">Get Started</a>
+							</div>
 						
-						<div class="col-sm-4">
-							<a class="image-hover" href="#work">
-								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-								</span>
-								<img class="img-fluid" src="assets/images/mockups/awards.jpg" alt="img" />
-							</a>
-							<h3><a class="mt-10" href="#work"> Awards &amp; Project Recognitions </a></h3>
-							<p style="text-align: justify;">
-								Our outstanding work and service has been recognized many times in numerous categories such as safety, reliability, energy efficiency, customer support available and quality...
+						</div>
+
+						<div class="col-md-4 col-sm-4">
+							
+							<div class="price-clean price-clean-popular">
+								<div class="ribbon"> 
+									<div class="ribbon-inner">Popular</br>choice</div>
+								</div>
+								<h4>
+									<sup>$</sup>130<em>/month</em>
+								</h4>
+								<h5> WEEKLY DELIVERIES </h5>
+								<hr />
+								<p>Same day delivery.</p>
+								<hr />
+								<p>Select preferred delivery schedule: <br>7h30AM - 10h30AM <br> 1h30PM - 4h30PM <br> 6h30PM - 9h30PM.</p>
+								<hr />
+								<p>Get notified shortly before the delivery.</p>
+								<hr />
+								<p>Schedule future deliveries.</p>
+								<hr />
+								<p>Save grocery lists in your profile for quick orders.</p>
+								<hr />
+								<a href="#" class="btn btn-3d btn-primary">Get Started</a>
+							</div>
+						
+						</div>
+
+						<div class="col-md-4 col-sm-4">
+							
+							<div class="price-clean">
+								<h4>
+									<sup>$</sup>170<em>/month</em>
+								</h4>
+								<h5> UNLIMITED DELIVERIES </h5>
+								<hr />
+								<p>Same day delivery.</p>
+								<hr />
+								<p>Select your preferred delivery time.</p>
+								<hr />
+								<p>Get notified shortly before the delivery.</p>
+								<hr />
+								<p>Schedule future deliveries.</p>
+								<hr />
+								<p>Save grocery lists in your profile for quick orders.</p>
+								<hr />
+								<a href="#" class="btn btn-3d btn-teal">Get Started</a>
+							</div>
+						
+						</div>
+
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<section class="b-0 alternate" id="form">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-8 offset-sm-2">
+
+						<div class="alert alert-light b-0">
+
+							<h2 class="fs-30 fw-400 text-center mb-0">QUICK DELIVERY FORM</h2>
+							
+							<hr>
+							
+							<p style="text-align: center;">
+								If you are not a registered user you may use this form to order a grocery delivery!
 							</p>
-						</div>
 
+							<hr>
 
-						<div class="col-sm-4">
-							<a class="image-hover" href="corporate-services.html">
-								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-								</span>
-								<img class="img-fluid" src="assets/images/mockups/corp4.jpg" alt="img" />
-							</a>
-							<h3><a class="mt-10" href="corporate-services.html" > Corporate Services </a></h3>
-							<p style="text-align: justify;">For projects such as shopping centers, hotels, hospitals, business centers, headquarters, factories, warehouses, parking lots, fullfilment centers...</p>
-						</div>
 
-						<div class="col-sm-4">
-							<a class="image-hover" href="residential-services.html">
-								<span class="image-hover-icon image-hover-dark"><!-- image-hover-light | image-hover-dark -->
-								</span>
-								<img class="img-fluid" src="assets/images/residential41.jpg" alt="img" />
-							</a>
-							<h3><a class="mt-10" href="residential-services.html"> Residential Services </a></h3>
-							<p style="text-align: justify;">For house projects such as stair lifts, house elevators, garage car elevators. Or any crazy other idea you could have in mind!<a href="custom-design.html" style="color: rgb(30, 27, 206); font-style: italic; font-size: 0.7em;"> See Custom Design Request &raquo;</a></p>
-						</div>
+							<div class="block">
 
-					</div>
-				</div>
-			</section>
-			<!-- /Services -->
-
-
-			
-			
-			
-
-			
-
-
-			<!-- Parallax -->
-			<section class="parallax parallax-1" style="background-image: url('assets/images/panel4.jpg');">
-				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
-
-				<div class="container">
-
-					<div class="text-center">
-						<h2 class="fs-40 fw-300">Elevator company operating since 1976, Rocket Elevators can meet all your corporate &amp; residential elevator needs</h2>
-						<a class="btn btn-default btn-lg" href="quote.html">GET A FREE ESTIMATE <i class="fa fa-angle-right"></i></a> 
-						<a class="btn btn-default btn-lg" href="#contactinf">CONTACT US <i class="fa fa-angle-right"></i></a>
-					</div>
-				</div>
-			</section>
-			<!-- /Parallax -->
-
-
-
-
-			<!-- PORTFOLIO -->
-			<section id="work">
-				<div class="container">
-
-					<div class="title text-center">
-						<h2>-Portfolio &amp; Awards-</h2>
-					</div>
-
-					<div class="text-center">
-						<ul class="nav nav-pills mix-filter mb-60">
-							<li data-filter="all" class="filter active"><a href="#">All</a></li>
-							<li data-filter="Industrial" class="filter"><a href="#">Industrial</a></li>
-							<li data-filter="Residential" class="filter"><a href="#">Residential</a></li>
-							<li data-filter="Commercial" class="filter"><a href="#">Commercial</a></li>
-							<li id="awards" data-filter="Awards" class="filter"><a href="#">Awards</a></li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div id="portfolio" class="portfolio-nogutter">
-
-						<div class="row mix-grid">
-
-							<div class="col-md-3 col-sm-3 mix Commercial"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/commercial1.jpeg" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>Carrefour Laval</h3>
-
-									</div>
-
-								</div>
-
-								
-
-							</div><!-- /item -->
-
-							<div class="col-md-3 col-sm-3 mix Commercial"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/commercial2.jpeg" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>Eaton Centre</h3>
-									</div>
-
-								</div>
-
-								
-
-							</div><!-- /item -->
-
-							<div class="col-md-3 col-sm-3 mix Commercial"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/commercial3.jpg" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>Real Estate Development</h3>
-									</div>
-
-								</div>
-
-								
-
-							</div><!-- /item -->
-
-							<div class="col-md-3 col-sm-3 mix Industrial"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/industrial1.jpeg" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>BNC Tower</h3>
-									</div>
-
-								</div>
-
-							</div><!-- /item -->
-
-							<div class="col-md-3 col-sm-3 mix Industrial"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/industrial2.jpeg" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>Price Centre</h3>
-									</div>
-
-								</div>
-
-							</div><!-- /item -->
-
-							<div class="col-md-3 col-sm-3 mix Industrial"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/industrial3.jpeg" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>Scotia Tower</h3>
-									</div>
-
-								</div>
-
-							</div><!-- /item -->
-
-							<div class="col-md-3 col-sm-3 mix Residential"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/residential1.jpg" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>Simpson's house</h3>
-										<h6>Stair lift for the elderly</h6>
-									</div>
-
-								</div>
-
-							</div><!-- /item -->
-
-
-							<div class="col-md-3 col-sm-3 mix Residential"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/residential2.jpg" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>Robinson's house</h3>
-										<h6>Indoors car elevator</h6>
-									</div>
-
-								</div>
-
-							</div><!-- /item -->
-
-
-							<div class="col-md-3 col-sm-3 mix Residential"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/residential3.jpg" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>Eddison's house</h3>
-										<h6>Penthouse elevator</h6>
-									</div>
-
-								</div>
-
-							</div><!-- /item -->
-
-							<div class="col-md-3 col-sm-3 mix Awards"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/awards5.png" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>REIC Pursuit of Excellence Award</h3>
-									</div>
-
-								</div>
-
-							</div><!-- /item -->
-
-							<div class="col-md-3 col-sm-3 mix Awards"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/awards2.png" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>BUILD Real Estate &amp; Property Award</h3>
-									</div>
-
-								</div>
-
-							</div><!-- /item -->
-
-							<div class="col-md-3 col-sm-3 mix Awards"><!-- item -->
-
-								<div class="item-box">
-									<figure>
-										<span class="item-hover">
-											<a href="work.html"><span class="overlay dark-5"></span></a>
-										</span>
-
-										<img class="img-fluid cover" src="assets/images/awards4.png" alt="">
-									</figure>
-
-									<div class="item-box-desc">
-										<h3>International Finance Real Estate Awards</h3>
-									</div>
-
-								</div>
-
-							</div><!-- /item -->
-
-						</div>
-
-
-				</div>
-			</section>
-			<!-- /PORTFOLIO -->
-
-			<!-- Testimonials -->
-			<section class="section-xs dark">
-				<div class="container">
-
-					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
-						<div class="testimonial">
-							<figure>
-								<img class="rounded" src="assets/images/jeunemathieu.jpg" alt="" />
-							</figure>
-							<div class="testimonial-content p-0">
-								<cite>
-									"Jeune" Mathieu Houde
-									<span>Rocket Elevators CEO</span>
-								</cite><br>
-								<p class="lead">Originally from the music industry, Mr. Houde decided it was time to elevate his life &amp; thus became Rocket Elevators' CEO.</p>
-							</div>
-						</div>
-						<div class="testimonial">
-							<figure>
-								<img class="rounded" src="assets/images/alexgreyer.jpg" alt="" />
-							</figure>
-							<div class="testimonial-content p-0">
-								<cite>
-									Kevin Giglio
-									<span>Rocket Elevators' February Employee of the month</span>
-								</cite><br>
-								<p class="lead">Just a kid trying to be every month's employee of the month, you know?</p>
-								
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</section>
-			<!-- /Testimonials -->
-
-			<!-- News -->
-			<section id="news">
-				<div class="container" >
-
-					<div class="title heading-dotted text-center" id="recentnews" >
-						<h2 >-Recent News-</h2>
-					</div>
-
-					<!-- 
-						controlls-over		= navigation buttons over the image 
-						buttons-autohide 	= navigation buttons visible on mouse hover only
-						
-						data-plugin-options:
-							"singleItem": true
-							"autoPlay": true (or ms. eg: 4000)
-							"navigation": true
-							"pagination": true
-							"items": "4"
-
-						owl-carousel item paddings
-							.owl-padding-0
-							.owl-padding-3
-							.owl-padding-6
-							.owl-padding-10
-							.owl-padding-15
-							.owl-padding-20
-					-->
-					<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over"  data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
-						
-						<div class="img-hover" >
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="assets/images/news/green.png" alt="">
-							</a>
-
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Rocket Elevators develops green technology</a></h4>
-							<p class="text-left" style="padding-top:27px;">Rocket Elevators files first patents of its kind for recyclabe energy elevators. Through exclusive designs, Rocket Elevators can use their own weight as an energy-producing mechanism. </p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li style="padding-top:27px;">
-									<i class="fa fa-calendar"></i> 
-									March 20th 2017
-								</li>
-							</ul>
-						</div>
-
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="assets/images/news/blueorig.png" alt="">
-							</a>
-
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Rocket Elevators to partner with Bezos' Blue Origin</a></h4>
-							<p class="text-left" style="padding-top:27px;">With the help of Rocket Elevators' technology, Blue Origin plans to build first space elevator for commercial purposes such as Planet Earth observation.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li style="padding-top:50px;">
-									<i class="fa fa-calendar"></i> 
-									Jan 1st 2018
-								</li>
-							</ul>
-						</div>
-
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="assets/images/news/villeqc.png" alt="">
-							</a>
-
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">City of Quebec to use exclusively Rocket Elevators in new city buildings.</a></h4>
-							<p class="text-left">Recent incidents with local elevator companies causing frequent injuries and even deaths in some case have led the City of Quebec to partner with Rocket Elevators to use their elevators, currently the safest on the market.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									September 18th 2018
-								</li>
-							</ul>
-						</div>
-
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="assets/images/news/versus.png" alt="">
-							</a>
-
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Rocket Elevators wants to compete with The Boring Company.</a></h4>
-							<p class="text-left">Internal sources at Rocket Elevators have confirmed plans to start developing by 2024 a network of underground tunnels using "horizontal elevators" to transport pedestrians and goods accross the city.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									May 2nd 2019
-								</li>
-							</ul>
-						</div>
-
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="assets/images/news/quebeccity.jpg" alt="">
-							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Study finds Rocket Elevators approaching elevator market monopoly in Quebec city.</a></h4>
-							<p class="text-left">Recent study by the IIES, Institute of International Elevator Safety  confirms Rocket Elevators now owns about 65% of the elevator market and that number is expected to grow by up to 13% a year.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									July 23rd 2019
-								</li>
-							</ul>
-						</div>
-
-						<div class="img-hover">
-							<a href="blog-single-default.html">
-								<img class="img-fluid" src="assets/images/news/jeunemathieu2.png" alt="CEO picture">
-							</a>
-							<h4 class="text-left mt-20"><a href="blog-single-default.html">Rocket Elevators appoints new CEO Mathieu Houde</a></h4>
-							<p class="text-left" style="padding-top:25px;">After countless contributions to Rocket Elevators' success as interim CEO, by unanimous vote, Mathieu Houde has been appointed as the new CEO of Rocket Elevators starting Jan 1st 2020.</p>
-							<ul class="text-left fs-12 list-inline list-separator">
-								<li>
-									<i class="fa fa-calendar"></i> 
-									November 14th 2019
-								</li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-			</section>
-			<!-- /News -->
-
-			<!-- Clients -->
-			<section id="clients" class="alternate">
-				<div class="container">
-
-					<div class="title heading-dotted text-center">
-						<h2>-Our Clients-</h2>
-					</div>
-
-					<ul class="row clients-dotted list-inline">
-						<li class="col-lg-6">
-							<a href="https://afgruppen.com/">
-								<img class="img-fluid" src="assets/images/customers/af-gruppen.png" alt="client" style="padding-left:10px;"/>
-							</a>
-						</li>
-						<li class="col-lg-6">
-							<a href="https://www.aspelinramm.no/">
-								<img class="img-fluid" src="assets/images/customers/aspelin-ramm2.png" alt="client" style="padding-left:10px;" />
-							</a>
-						</li>
-						<li class="col-lg-6">
-							<a href="https://www.asplanviak.no/">
-								<img class="img-fluid" src="assets/images/customers/asplan-viak2.png" alt="client" style="padding-right:10px;" />
-							</a>
-						</li>
-						<li class="col-lg-6">
-							<a href="https://www.backe.no/">
-								<img class="img-fluid" src="assets/images/customers/backe.png" alt="client" style="padding-left:10px;" />
-							</a>
-						</li>
-						<li class="col-lg-6">
-							<a href="https://www.bob.no/">
-								<img class="img-fluid" src="assets/images/customers/bob.png" alt="client" style="height:200px;"/>
-							</a>
-						</li>
-						<li class="col-lg-6">
-							<a href="https://miliarium.no/">
-								<img class="img-fluid" src="assets/images/customers/miliarium.png" alt="client" style="padding-left:10px;" />
-							</a>
-						</li>
-						<li class="col-lg-6">
-							<a href="http://www.nordic.no/">
-								<img class="img-fluid" src="assets/images/customers/nordic.png" alt="client" style="padding-right:10px;"/>
-							</a>
-						</li>
-						<li class="col-lg-6">
-							<a href="https://nrep.com/">
-								<img class="img-fluid" src="assets/images/customers/nrep.png" alt="client" style="padding-left:10px;" />
-							</a>
-						</li>
-						
-						<li class="col-lg-6">
-							<a href="https://www.obos.no/">
-								<img class="img-fluid" src="assets/images/customers/obos.png" alt="client" style="padding-right:10px;"/>
-							</a>
-						</li>
-						
-						<li class="col-lg-6">
-							<a href="https://www.skanska.com/">
-								<img class="img-fluid" src="assets/images/customers/skanska2.png" alt="client" style="padding-left:10px;" />
-							</a>
-						</li>
-						
-						<li class="col-lg-6">
-							<a href="https://spg.no/">
-								<img class="img-fluid" src="assets/images/customers/spg2.png" alt="client" style="padding-right:10px;"/>
-							</a>
-						</li>
-						<span id="contactinf"></span>
-						<li class="col-lg-6">
-							<a href="https://dark.no/">
-								<img class="img-fluid" src="assets/images/customers/dark.png" alt="client" style="padding-left:10px;" />
-							</a>
-						</li>
-					</ul>
-					
-				</div>
-			</section>
-			<!-- /Clients -->
-			
-			<!-- CONTACT -->
-			<section>
-				<div class="container">
-
-					<header class="text-center mb-60">
-						<span class="font-lato fs-50">
-							<strong>Contact us</strong>
-						</span>	
-						<p class="font-lato">Get a free estimate in less than 24hrs!</p> 
-						<p>
-							<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 725 boulevard Lebourgneuf, Quebec, G2J 0C4</span>
-							<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:(581) 701-0303">(581) 701-0303</a></span>
-							<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:info@codeboxx.biz">info@codeboxx.biz</a></span>
-						</p>
-						<hr/>
-					</header>
-
-
-					<div class="row">
-
-							<!-- FORM -->
-							<div class="col-md-12 col-sm-12">
-
-								<h3><em>Already know what you want? Let us know below!</em></h3>
-
-								
 								<!--
 									MESSAGES
 									
@@ -1012,7 +415,7 @@
 											Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
 
 										PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
-													ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+													 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
 
 										WARNING! Do not change the `email` and `name`!
 													contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
@@ -1020,186 +423,177 @@
 								-->
 
 								<!-- Alert Success -->
-							<div id="alert_success" class="alert alert-success mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>Thank You!</strong> Your message successfully sent!
-							</div><!-- /Alert Success -->
+								<div id="alert_success" class="alert alert-success mb-30">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<strong>Thank You!</strong> Your message successfully sent!
+								</div><!-- /Alert Success -->
 
 
-							<!-- Alert Failed -->
-							<div id="alert_failed" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>[SMTP] Error!</strong> Internal server error!
-							</div><!-- /Alert Failed -->
+								<!-- Alert Failed -->
+								<div id="alert_failed" class="alert alert-danger mb-30">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<strong>[SMTP] Error!</strong> Internal server error!
+								</div><!-- /Alert Failed -->
 
 
-							<!-- Alert Mandatory -->
-							<div id="alert_mandatory" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-							</div><!-- /Alert Mandatory -->
+								<!-- Alert Mandatory -->
+								<div id="alert_mandatory" class="alert alert-danger mb-30">
+									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+									<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+								</div><!-- /Alert Mandatory -->
+
+								<!-- 
+									.validate 				- very important, to activate validation plugin
+
+									data-success="Sent! Thank you!" 	- used by toastr to print the message
+									data-toastr-position="top-right"	- toastr message position:
+										.top-right
+										.top-left
+										.bottom-right
+										.bottom-left
 
 
-								<form action="php/contact.php" method="post" enctype="multipart/form-data">
+									NOTE: Add .required class for required fields.
+									This form example already used on Careers page: page-careers.html
+								-->
+								<form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
 									<fieldset>
+										<!-- required [php action request] -->
 										<input type="hidden" name="action" value="contact_send" />
 
 										<div class="row">
-											<div class="col-md-6">
-												<label for="contact:name">Full Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+											<div class="col-md-6 col-sm-6">
+												<label>First Name *</label>
+												<input type="text" name="contact[first_name]" value="" class="form-control required">
 											</div>
-
-											<div class="col-md-6">
-												<label for="contact:business">Business Name *</label>
-												<input required type="text" value="" class="form-control" name="contact[business][required]" id="contact:business">
-											</div>
-										</div>
-										
-										<div class="row">
-
-											<div class="col-md-6">
-												<label for="contact:email">E-mail Address *</label>
-												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
-											</div>
-
-											<div class="col-md-6">
-												<label for="contact:phone">Phone</label>
-												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+											<div class="col-md-6 col-sm-6">
+												<label>Last Name *</label>
+												<input type="text" name="contact[last_name]" value="" class="form-control required">
 											</div>
 										</div>
 
 										<div class="row">
-											<div class="col-md-12">
-												<label for="contact_department">Department</label>
-												<select class="form-control pointer" name="contact[department]">
+											<div class="col-md-6 col-sm-6">
+												<label>Email *</label>
+												<input type="email" name="contact[email]" value="" class="form-control required">
+											</div>
+											<div class="col-md-6 col-sm-6">
+												<label>Phone *</label>
+												<input type="text" name="contact[phone]" value="" class="form-control required">
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-md-6 col-sm-6">
+												<label>Delivery Date *</label>
+												<input type="text" name="contact[delivery_date]" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
+											</div>
+											<div class="col-md-6 col-sm-6">
+												<label>Preferred Delivery Time *</label>
+												<select name="contact[delivery_time]" class="form-control pointer required">
 													<option value="">--- Select ---</option>
-													<option value="Support">Support</option>
-													<option value="Marketing">Marketing</option>
-													<option value="Human Ressources">Human Ressources</option>
+													<option value="Marketing">Between 7h30AM to 10h30AM.</option>
+													<option value="Developer">Between 1h30PM to 4h30PM.</option>
+													<option value="php">Between 6h30PM to 9h30PM.</option>
 												</select>
 											</div>
 										</div>
 
 										<div class="row">
-												<div class="col-md-6">
-													<label for="contact:message">Message</label>
-													<textarea required maxlength="1000" rows="6" class="form-control" name="contact[message]" id="contact:message"></textarea>
-												</div>
-												<div class="col-md-6">
-													<label for="contact:projectdescription">Project Description *</label>
-													<textarea required maxlength="1000" rows="6" class="form-control" name="contact[projectdescription]" id="contact:projectdescription"></textarea>
-												</div>
+											<div class="col-md-12 col-sm-12">
+												<label>Message</label>
+												<textarea name="contact[message]" rows="4" class="form-control" placeholder="Paste here your grocery list or any specifications you might have concerning the groceries or the delivery." style="font-size: 0.8em;"></textarea>
+											</div>
 										</div>
 
 										<div class="row">
-												<div class="col-md-12">
-													<label for="contact:attachment">File Attachment</label>
+											<div class="col-md-12">
+												<label>
+													File Attachment 
+													<small class="text-muted">Upload your grocery list or pictures of desired items!</small>
+												</label>
 
-													<!-- custom file upload -->
-													<input class="custom-file-upload " type="file" id="file" name="contact[attachment]" id="contact:attachment" data-btn-text="Select a File" />
-													<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
-													
-												</div>
+												<!-- custom file upload -->
+												<input class="custom-file-upload" name="contact[attachment]" type="file" id="file" data-btn-text="Select a File" />
+												<small class="text-muted block">Max file size: 10Mb</small>
+
+											</div>
 										</div>
+
 									</fieldset>
 
 									<div class="row">
 										<div class="col-md-12">
-											<button type="submit" class="btn btn-light btn-outline-dark"><i class="fa fa-check"></i> SEND MESSAGE</button>
+											<button type="submit" class="btn btn-3d btn-primary btn-xlg btn-block mt-30">
+												SEND FORM
+											</button>
 										</div>
 									</div>
+
 								</form>
 
+
+							</div>
+
 						</div>
-					<!-- /FORM -->
+
+					</div>
 				</div>
 
 			</div>
-			</section>
-			<!-- /CONTACT -->
+		</section>
+
+		<!-- Footer -->
+        <footer>
+        	<div class="footer-top">
+		        <div class="container">
+		        	<div class="row">
+		        		<div class="col-md-3 footer-about wow fadeInUp">
+		        			<h3>About me</h3>
+		        			<p>
+		        				My name is Kevin and I'll do your groceries. Stay home, safe with the people you love & care for. 
+		        			</p>
+	                    </div>
+		        		<div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
+		        			<h3>Contact</h3>
+		                	<p><i class="fas fa-map-marker-alt"></i> Montreal, Quebec, Canada</p>
+		                	<p><i class="fas fa-phone"></i> Phone: (514)717-1022</p>
+		                	<p><i class="fas fa-envelope"></i> Email: <a href="mailto:foodshopper@hotmail.com">foodshopper@hotmail.com</a></p>
+	                    </div>
+	                    <div class="col-md-4 footer-links wow fadeInUp">
+	                    	<div class="row">
+	                    		<div class="col">
+	                    			<h3>Links</h3>
+	                    		</div>
+	                    	</div>
+	                    	<div class="row">
+	                    		<div class="col-md-6">
+	                    			<p><a class="scroll-link" href="#">Home</a></p>
+	                    			<p><a href="#steps">How it works</a></p>
+	                    			<p><a href="#pricing">Pricing</a></p>
+	                    		</div>
+	                    	</div>
+	                    </div>
+		            </div>
+		        </div>
+			</div>
 			
-			<!-- FOOTER -->
-			<footer id="footer">
-				<div class="container">
-					<div class="col-md-8">
+	        <!-- <div class="footer-bottom">
+	        	<div class="container">
+	        		<div class="row">
+	           			<div class="col footer-social">
+	                    	<a href="#"><i class="fab fa-facebook-f"></i></a> 
+							<a href="#"><i class="fab fa-twitter"></i></a> 
+							<a href="#"><i class="fab fa-google-plus-g"></i></a> 
+							<a href="#"><i class="fab fa-instagram"></i></a> 
+							<a href="#"><i class="fab fa-pinterest"></i></a>
+	                    </div>
+	           		</div>
+	        	</div>
+	        </div> -->
+        </footer>
 
-						<h3 class="letter-spacing-1">WHY ROCKET ELEVATORS?</h3>
-
-						<!-- Small Description -->
-						<p>
-							Not only do you get the best prices, you get the best quality elevators and with every purchase comes 24/7 assistance so you can always get an answer as quick as possible. Rocket Elevators knows how important being available at all times is to you. Still not convinced? <a href="#work" style="color:rgb(255, 255, 255)"> &laquo; Have a look at our work and awards! &raquo; </a> 
-						</p>
-					</div>
-
-					<!-- Newsletter Form -->
-						<div class="col-md-12">
-							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
-							<!-- Social Icons -->
-							<div class="mt-20">
-								<a href="#" class="social-icon social-icon-border social-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
-
-									<i class="icon-facebook"></i>
-									<i class="icon-facebook"></i>
-								</a>
-
-								<a href="#" class="social-icon social-icon-border social-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
-									<i class="icon-twitter"></i>
-									<i class="icon-twitter"></i>
-								</a>
-
-								<a href="#" class="social-icon social-icon-border social-gplus" data-toggle="tooltip" data-placement="top" title="Google plus">
-									<i class="icon-gplus"></i>
-									<i class="icon-gplus"></i>
-								</a>
-
-								<a href="#" class="social-icon social-icon-border social-linkedin" data-toggle="tooltip" data-placement="top" title="Linkedin">
-									<i class="icon-linkedin"></i>
-									<i class="icon-linkedin"></i>
-								</a>
-
-								<a href="#" class="social-icon social-icon-border social-rss" data-toggle="tooltip" data-placement="top" title="Rss">
-									<i class="icon-rss"></i>
-									<i class="icon-rss"></i>
-								</a>
-					
-							</div>
-							<!-- /Social Icons -->
-							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-						</div>
-						
-						<div class="col-md-6">
-							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
-								<div class="input-group">
-									<span class="input-group-addon" ><i class="fa fa-envelope" ></i></span>
-									<input type="email" id="email" name="email"  class="form-control required" placeholder="Email Address">
-									<span class="input-group-btn">
-										<button class="btn btn-light"" type="submit">Subscribe</button>
-									</span>
-								</div>
-							</form>
-						</div>
-
-						<audio controls="controls" src="assets/elevatormusic.mp3" autoplay style="height: 20px; width: 180px;">
-						</audio>
-							
-					<!-- /Newsletter Form -->
-
-					<div class="copyright">
-						<div class="container">
-							<ul class="float-right m-0 list-inline mobile-block">
-								<li><a href="#">Terms &amp; Conditions</a></li>
-								<li>&bull;</li>
-								<li><a href="#">Privacy</a></li>
-							</ul>
-							&copy; All Rights Reserved, alexgreyer inc
-					</div>
-				</div>
-					
-			</footer>
-			<!-- /FOOTER -->
-
-		</div>
+		
 		<!-- /wrapper -->
 
 
@@ -1221,15 +615,8 @@
 
 		<script src="assets/js/scripts.js"></script>
 		
-
-		<!-- REVOLUTION SLIDER -->
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
-		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
-		<script src="assets/js/view/demo.revolution_slider.js"></script>
-
-		<!-- PAGELEVEL SCRIPTS -->
-		<script src="assets/js/contact.js"></script>
-
-
+		<!-- SWIPER SLIDER -->
+		<script src="assets/plugins/slider.swiper/dist/js/swiper.min.js"></script>
+		<script src="assets/js/view/demo.swiper_slider.js"></script>
 	</body>
 </html>

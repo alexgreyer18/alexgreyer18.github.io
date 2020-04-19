@@ -159,7 +159,7 @@
 	.btn-primary:hover
 	.pagination>.active>a,
 	.pagination>.active>a:hover {
-		border-color: rgb(0, 0, 0);
+		border-color: #9E9E9E;
 	}
 
 	#topNav ul.dropdown-menu { /* submenu border top color */
@@ -526,20 +526,4 @@ i.ico-hover:hover {
 .hvr-underline-reveal:before,
 .hvr-overline-reveal:before {
 	background-color: #9E9E9E;
-}
-
-
-.scrollbar {
-    background-color: #F5F5F5;
-    float: left;
-    height: 300px;
-    margin-bottom: 25px;
-    margin-left: 22px;
-    margin-top: 40px;
-    width: 65px;
-    overflow-y: scroll;
-}
-
-.force-overflow {
-    min-height: 450px;
 }
