@@ -2962,10 +2962,9 @@ body.menu-vertical #mainMenu.sidebar-vertical .navbar-collapse>ul.nav.navbar-nav
 		Top Bar
 	*/
 	#topBar {
-		display: block;
-    	justify-content: space-between;
+		display:block;
+		background-color:#fff;
 		border-bottom:rgba(0,0,0,0.05) 1px solid;
-		color: white;
 	}
 	#topBar>.border-bottom {
 		border-bottom:rgba(0,0,0,0.05) 1px solid;

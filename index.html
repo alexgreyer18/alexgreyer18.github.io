@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>FoodShopper</title>
-		<link rel="icon" href="assets/images/FoodShopperBadge.png">
-		<meta name="description" content="" />
-		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
-		<!-- mobile settings -->
-		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
-		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Smarty - Multipurpose + Admin</title>
+	<meta name="description" content="" />
+	<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
 
-		<!-- WEB FONTS : use %7C instead of | (pipe) -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+	<!-- mobile settings -->
+	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
-		<!-- CORE CSS -->
-		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- WEB FONTS : use %7C instead of | (pipe) -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
+		rel="stylesheet" type="text/css" />
 
-		<!-- SWIPER SLIDER -->
-		<link href="assets/plugins/slider.swiper/dist/css/swiper.min.css" rel="stylesheet" type="text/css" />
+	<!-- CORE CSS -->
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-		<!-- THEME CSS -->
-		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/plugin-hover-buttons.css" rel="stylesheet" type="text/css" />
-		<!-- PAGE LEVEL SCRIPTS -->
-		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
-	</head>
+	<!-- THEME CSS -->
+	<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
 
-	<!--
+	<!-- PAGE LEVEL SCRIPTS -->
+	<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+</head>
+
+<!--
 		AVAILABLE BODY CLASSES:
 		
 		smoothscroll 			= create a browser smooth scroll
@@ -50,12 +49,61 @@
 		BACKGROUND IMAGE [together with .boxed class]
 		data-background="assets/images/_smarty/boxed_background/1.jpg"
 	-->
-	<body class="smoothscroll enable-animation">
 
-		<!-- wrapper -->
-		<div id="wrapper">
+<body class="smoothscroll enable-animation">
 
-			<!-- 
+	<!-- SLIDE TOP -->
+	<div id="slidetop">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-4">
+					<h6><i class="icon-heart"></i> WHY SMARTY?</h6>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales
+						sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et,
+						iaculis ac massa. </p>
+				</div>
+
+				<div class="col-md-4">
+					<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
+					<ul class="list-unstyled">
+						<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very
+								very very very very very very very very </a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit
+								amet</a></li>
+						<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur
+								adipiscing elit</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4">
+					<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+					<ul class="list-unstyled">
+						<li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
+						<li><b>Phone:</b> 1-800-565-2390</li>
+						<li><b>Email:</b> <a href="mailto:support@yourname.com">support@yourname.com</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+		<a class="slidetop-toggle" href="#">
+			<!-- toggle button --></a>
+
+	</div>
+	<!-- /SLIDE TOP -->
+
+
+	<!-- wrapper -->
+	<div id="wrapper">
+
+		<!-- 
 				AVAILABLE HEADER CLASSES
 
 				Default nav height: 96px
@@ -81,72 +129,59 @@
 
 				Example Usage:  class="clearfix sticky header-sm transparent b-0"
 			-->
-			<div id="header" class="navbar-toggleable-md sticky transparent header-sm clearfix">
-				<!-- Top Bar -->
-				<div id="topBar">
-					<div>
 
-						<!-- right -->
-						<ul class="top-links list-inline float-right">
-							<li class="text-welcome hidden-xs-down">Welcome to FoodShopper, <strong>Benjamin</strong></li>
-							<li>
-								<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#" ><i class="fa fa-user hidden-xs-down"></i> MY ACCOUNT</a>
-								<ul class="dropdown-menu float-right">
-									<li><a tabindex="-1" href="#"><i class="fa fa-history"></i> ORDER HISTORY</a></li>
-									<li class="divider"></li>
-									<li><a tabindex="-1" href="#"><i class="fa fa-bookmark"></i> MY WISHLIST</a></li>
-									<li><a tabindex="-1" href="#"><i class="fa fa-edit"></i> MY REVIEWS</a></li>
-									<li><a tabindex="-1" href="#"><i class="fa fa-cog"></i> MY SETTINGS</a></li>
-									<li class="divider"></li>
-									<li><a tabindex="-1" href="#"><i class="glyphicon glyphicon-off"></i> LOGOUT</a></li>
-								</ul>
-							</li>
-							<li class="hidden-xs-down"><a href="assets/login.html">LOGIN</a></li>
-							<li class="hidden-xs-down"><a href="page-register-1.html">REGISTER</a></li>
-						</ul>
+		<!--------------- HEADER ------------------------>
+		<div id="header" class="navbar-toggleable-md sticky transparent b-0 clearfix">
 
-						<!-- left -->
-						<ul class="top-links list-inline">
-							<li class="hidden-xs-down"><a href="page-faq-1.html">FAQ</a></li>
-							<li>
-								<a class="dropdown-toggle no-text-underline" data-toggle="dropdown" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/ca.png" width="16" height="11" alt="lang" /> ENGLISH</a>
-								<ul class="dropdown-langs dropdown-menu">
-									<li class="divider"></li>
-									<!-- <li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/it.png" width="16" height="11" alt="lang" /> ITALIAN</a></li> -->
-									<li><a tabindex="-1" href="#"><img class="flag-lang" src="assets/images/_smarty/flags/ca.png" width="16" height="11" alt="lang" /> FRANÇAIS</a></li>
-								</ul>
-							</li>
-							
-						</ul>
+			<!-- TOP NAV -->
+			<header id="topNav">
+				<div class="full-container">
 
-					</div>
-				</div>
-				<!-- /Top Bar -->
+					<!-- Mobile Menu Button -->
+					<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="fa fa-bars"></i>
+					</button>
 
-				<!-- TOP NAV -->
-				<header id="topNav">
-					<div class="full-container">
+					<!-- BUTTONS -->
+					<ul class="float-right nav nav-pills nav-second-main">
 
-						<!-- Mobile Menu Button -->
-						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
-							<i class="fa fa-bars"></i>
-						</button>
+						<!-- SEARCH -->
+						<li class="search">
+							<a href="javascript:;">
+								<i class="fa fa-search"></i>
+							</a>
+							<div class="search-box">
+								<form action="page-search-result-1.html" method="get">
+									<div class="input-group">
+										<input type="text" name="src" placeholder="Search" class="form-control" />
+										<span class="input-group-btn">
+											<button class="btn btn-primary" type="submit">Search</button>
+										</span>
+									</div>
+								</form>
+							</div>
+						</li>
+						<!-- /SEARCH -->
 
-						<!-- Logo -->
-						<a class="logo float-left" href="index.html">
-							<img src="assets/images/FoodShopperBadge.png" alt="" />
-						</a>
+					</ul>
+					<!-- /BUTTONS -->
 
-						<!-- 
+
+					<!-- Logo -->
+					<a class="logo float-left" href="index.html">
+						<img src="assets/images/logo7.png" alt="" />
+					</a>
+
+					<!-- 
 							Top Nav 
 							
 							AVAILABLE CLASSES:
 							submenu-dark = dark sub menu
 						-->
-						<div class="navbar-collapse collapse float-right nav-main-collapse">
-							<nav class="nav-main">
+					<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+						<nav class="nav-main">
 
-								<!--
+							<!--
 									NOTE
 									
 									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
@@ -156,467 +191,773 @@
 										<a href="#">HOME</a>
 									</li>
 								-->
-								<ul id="topMain" class="nav nav-pills nav-main">
-									<li class="dropdown"><!-- HOME -->
-										<a class="dropdown-toggle" href="#">
-											HOME
-										</a>
-									</li>
-									<li class="dropdown"><!-- PLANS -->
-										<a class="dropdown-toggle" href="#pricing">
-											PRICING
-										</a>
-									</li>
-									<li class="dropdown"><!-- FORM -->
-										<a class="dropdown-toggle" href="#form">
-											DELIVERY FORM
-										</a>
-									</li>
-								</ul>
+							<ul id="topMain" class="nav nav-pills nav-main">
+								<li>
+									<!-- HOME -->
+									<a href="#">
+										HOME
+									</a>
+								</li>
+								<li class="dropdown">
+									<!-- EDUCATION -->
+									<a class="dropdown-toggle" href="#">
+										EDUCATION
+									</a>
+									<ul class="dropdown-menu">
+										<li class="dropdown active">
+											<a class="dropdown-toggle" href="#">
+												WHERE TO START
+											</a>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#">
+												TECHNICAL ANALYSIS
+											</a>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#">
+												FUNDAMENTAL ANALYSIS
+											</a>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#">
+												RISK MANAGEMENT
+											</a>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#">
+												PSYCHOLOGY
+											</a>
+										</li>
 
-							</nav>
-						</div>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<!-- TRADING -->
+									<a class="dropdown-toggle" href="#">
+										TRADING
+									</a>
+									<ul class="dropdown-menu">
+										<li class="dropdown active">
+											<a class="dropdown-toggle" href="#">
+												FREE SIGNALS
+											</a>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#">
+												VIP SIGNALS
+											</a>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#">
+												MENTORING
+											</a>
+										</li>
 
+									</ul>
+								</li>
+								<li class="dropdown">
+									<!-- PLANS & PRICING -->
+									<a class="dropdown-toggle" href="#">
+										PLANS & PRICING
+									</a>
+									<ul class="dropdown-menu">
+										<li class="dropdown active">
+											<a class="dropdown-toggle" href="#">
+												VIP SIGNALS
+											</a>
+										</li>
+										<li class="dropdown">
+											<a class="dropdown-toggle" href="#">
+												MENTORING
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+						</nav>
 					</div>
-				</header>
-				<!-- /Top Nav -->
+
+				</div>
+			</header>
+			<!-- /Top Nav -->
+
+		</div>
+		<!--------------- HEADER ------------------------>
+
+
+
+		<!-- SLIDER -->
+		<section id="slider" class="fullheight h-650" style="background:url('assets/images/candles5.png')">
+			<span class="overlay dark-2">
+				<!-- dark overlay [0 to 9 opacity] --></span>
+
+			<canvas id="canvas-particle" data-rgb="156,217,249">
+				<!-- CANVAS PARTICLES --></canvas>
+
+		
+				
 				
 
+			<div class="display-table">
+				<div class="display-table-cell vertical-align-middle">
+					<div class="container text-center">
+						<a href="index.html">
+							<img src="assets/images/logo8.png" alt="" />
+						</a>
+						<h1 class="m-0 wow fadeInUp" data-wow-delay="0.4s">
+							GreyerTrades is
+							<!--
+									TEXT ROTATOR
+									data-animation="fade|flip|flipCube|flipUp|spin"
+								-->
+							<span class="rotate " data-animation="fade" data-speed="1500">
+								PRECISION, CONSISTENCY, EDUCATION, FREEDOM
+							</span>
+						</h1>
+
+						<p class="lead font-lato fs-30 wow fadeInUp" data-wow-delay="0.7s">
+							Forex Journey to Financial Freedom
+						</p>
+						
+						<a class="btn btn-default btn-lg" href="#">START NOW</a>
+						
+					</div>
+
+				</div>
 			</div>
 
-			<!-- 
-				SLIDER
+		</section>
+		<!-- /SLIDER -->
 
-				Classes:
-					.fullheight = full height slider
-			-->
-			<section id="slider" class="fullheight">
+		
 
-				<!--
-					SWIPPER SLIDER PARAMS
-					
-					data-effect="slide|fade|coverflow"
-					data-autoplay="2500|false" 						(remove to disable autoplay)
-				-->
-				<div class="swiper-container" data-effect="slide" data-autoplay="false">
-					<div class="swiper-wrapper">
-
-						<!-- SLIDE 1 -->
-						<div class="swiper-slide" style="background-image: url('assets/images/grocery_index.jpg');">
-							<div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
-							
-							<div class="display-table">
-								<div class="display-table-cell vertical-align-middle">
-									<div class="container">
-
-										<div class="row">
-											<div class="text-center col-md-8 col-12 offset-md-2">
-
-												<h1 class="bold font-raleway wow fadeInUp" data-wow-delay="0.4s">WELCOME TO FOODSHOPPER</h1>
-												<p class="lead font-lato fw-300 hidden-xs-down wow fadeInUp" data-wow-delay="0.6s">Stay home, stay safe, let me do the groceries for you.</p>
-												<a class="btn btn-default btn-lg wow fadeIn hvr-icon-down" data-wow-delay="1.5s" href="#steps">SEE HOW IT WORKS</a>
-												
-											</div>
-										</div>
-							
-									</div>
-								</div>
-							</div>
-							
-						</div>
-						<!-- /SLIDE 1 -->
-
-					</div>
-				</div>
-					
-			</section>
-			<!-- /SLIDER -->
-
-			<!-- -->
-			<section id="steps">
-				<div class="container">
-				
-					<!-- <div class="heading-title text-center mb-80">
-						<h3>How Does It Work?</h3>
-					</div> -->
-					<!-- <ul class="process-steps nav nav-justified">
-						<li class="nav-item">
-							<a class="nav-link" href="#"><i class="icon-shopping-cart"></i></a>
-							<h5>Shop</h5>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="#"><i class="icon-pencil"></i></a>
-							<h5>Review Cart</h5>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#"><i class="icon-ok"></i></a>
-							<h5>Finish</h5>
-						</li>
-					</ul> -->
-					
-					<ul class="process-steps nav nav-justified text-left">
-						<li class="nav-item">
-							<a class="ico-light ico-lg ico-rounded ico-hover" href="#step1" data-toggle="tab">1</a>
-							<h5>Fill out a Grocery Delivery Form.</h5>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#step2" data-toggle="tab">2</a>
-							<h5>Proceed to checkout.</h5>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#step3" data-toggle="tab">3</a>
-							<h5>Sit back & relax while I do the shopping for you!</h5>
-						</li>
-					</ul>
-
-					<div class="tab-content mt-60">
-						<div role="tabpanel" class="tab-pane active" id="step1">
-							<h4>Order Grocery</h4>
-							Select desired grocery items, preferred brands, budget and delivery time preference through the form below or contact me through email. 
-							</br> Delivery timeframes are from 7h30AM to 10h30AM, 1h30PM to 4h30PM and 6h30PM to 9h30PM. </br></br><p style="font-style: italic;">In need of an express emergency delivery? 
-							Text the phone number below!</p>
-						</div>
-
-						<div role="tabpanel" class="tab-pane" id="step2">
-							<h4>Review Your Cart</h4>
-							Payment can be made through interac transfer or cash. Credit card payments comming soon.
-						</div>
-
-						<div role="tabpanel" class="tab-pane" id="step3">
-							<h4>Receive your order at the specified delivery time of your choice!</h4>
-							Your order is on the way at the specified time of your choice.
-						</div>
-					</div>
-
-				</div>
-			</section>
-			<!-- / -->
-
-			<section style="background:url('assets/images/mockup2.jpg')">
-				<div class="container" id="pricing">
-
-					<div class="heading-title heading-line-single text-center">
-						<h3>Pricing</h3>
-					</div>
-
-					<div class="row">
-
-						<div class="col-md-4 col-sm-4">
-							
-							<div class="price-clean">                                
-								<h4>
-									<sup>$</sup>40<em>/delivery</em>
-								</h4>
-								<h5> No Subscription </h5>
-								<hr />
-								<h4>
-									<sup>$</sup>25<em>/delivery</em>
-								</h4>
-								<h5> ELDERLY & DISABLED PERSON</h5>
-								<hr />
-								<p>Same day delivery.</p>
-								<hr />
-								<p>Choose a delivery period: AM or PM.</p>
-								<hr />
-								<a href="#" class="btn btn-3d btn-teal">Get Started</a>
-							</div>
-						
-						</div>
-
-						<div class="col-md-4 col-sm-4">
-							
-							<div class="price-clean price-clean-popular">
-								<div class="ribbon"> 
-									<div class="ribbon-inner">Popular</br>choice</div>
-								</div>
-								<h4>
-									<sup>$</sup>130<em>/month</em>
-								</h4>
-								<h5> WEEKLY DELIVERIES </h5>
-								<hr />
-								<p>Same day delivery.</p>
-								<hr />
-								<p>Select preferred delivery schedule: <br>7h30AM - 10h30AM <br> 1h30PM - 4h30PM <br> 6h30PM - 9h30PM.</p>
-								<hr />
-								<p>Get notified shortly before the delivery.</p>
-								<hr />
-								<p>Schedule future deliveries.</p>
-								<hr />
-								<p>Save grocery lists in your profile for quick orders.</p>
-								<hr />
-								<a href="#" class="btn btn-3d btn-primary">Get Started</a>
-							</div>
-						
-						</div>
-
-						<div class="col-md-4 col-sm-4">
-							
-							<div class="price-clean">
-								<h4>
-									<sup>$</sup>170<em>/month</em>
-								</h4>
-								<h5> UNLIMITED DELIVERIES </h5>
-								<hr />
-								<p>Same day delivery.</p>
-								<hr />
-								<p>Select your preferred delivery time.</p>
-								<hr />
-								<p>Get notified shortly before the delivery.</p>
-								<hr />
-								<p>Schedule future deliveries.</p>
-								<hr />
-								<p>Save grocery lists in your profile for quick orders.</p>
-								<hr />
-								<a href="#" class="btn btn-3d btn-teal">Get Started</a>
-							</div>
-						
-						</div>
-
-					</div>
-				</div>
-			</section>
-		</div>
-
-		<section class="b-0 alternate" id="form">
+		<!-- Welcome -->
+		<section>
 			<div class="container">
 
-				<div class="row">
-					<div class="col-sm-8 offset-sm-2">
-
-						<div class="alert alert-light b-0">
-
-							<h2 class="fs-30 fw-400 text-center mb-0">QUICK DELIVERY FORM</h2>
-							
-							<hr>
-							
-							<p style="text-align: center;">
-								If you are not a registered user you may use this form to order a grocery delivery!
-							</p>
-
-							<hr>
-
-
-							<div class="block">
-
-								<!--
-									MESSAGES
-									
-										How it works?
-										The form data is posted to php/contact.php where the fields are verified!
-										php.contact.php will redirect back here and will add a hash to the end of the URL:
-											#alert_success 		= email sent
-											#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
-											#alert_mandatory	= email not sent - required fields empty
-											Hashes are handled by assets/js/contact.js
-
-										Form data: required to be an array. Example:
-											contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
-											Also, add `required` to input fields if is a mandatory field. 
-											Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
-
-										PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
-													 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
-
-										WARNING! Do not change the `email` and `name`!
-													contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-													contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-								-->
-
-								<!-- Alert Success -->
-								<div id="alert_success" class="alert alert-success mb-30">
-									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-									<strong>Thank You!</strong> Your message successfully sent!
-								</div><!-- /Alert Success -->
-
-
-								<!-- Alert Failed -->
-								<div id="alert_failed" class="alert alert-danger mb-30">
-									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-									<strong>[SMTP] Error!</strong> Internal server error!
-								</div><!-- /Alert Failed -->
-
-
-								<!-- Alert Mandatory -->
-								<div id="alert_mandatory" class="alert alert-danger mb-30">
-									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-									<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-								</div><!-- /Alert Mandatory -->
-
-								<!-- 
-									.validate 				- very important, to activate validation plugin
-
-									data-success="Sent! Thank you!" 	- used by toastr to print the message
-									data-toastr-position="top-right"	- toastr message position:
-										.top-right
-										.top-left
-										.bottom-right
-										.bottom-left
-
-
-									NOTE: Add .required class for required fields.
-									This form example already used on Careers page: page-careers.html
-								-->
-								<form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data" data-success="Sent! Thank you!" data-toastr-position="top-right">
-									<fieldset>
-										<!-- required [php action request] -->
-										<input type="hidden" name="action" value="contact_send" />
-
-										<div class="row">
-											<div class="col-md-6 col-sm-6">
-												<label>First Name *</label>
-												<input type="text" name="contact[first_name]" value="" class="form-control required">
-											</div>
-											<div class="col-md-6 col-sm-6">
-												<label>Last Name *</label>
-												<input type="text" name="contact[last_name]" value="" class="form-control required">
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-6 col-sm-6">
-												<label>Email *</label>
-												<input type="email" name="contact[email]" value="" class="form-control required">
-											</div>
-											<div class="col-md-6 col-sm-6">
-												<label>Phone *</label>
-												<input type="text" name="contact[phone]" value="" class="form-control required">
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-6 col-sm-6">
-												<label>Delivery Date *</label>
-												<input type="text" name="contact[delivery_date]" value="" class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en" data-RTL="false">
-											</div>
-											<div class="col-md-6 col-sm-6">
-												<label>Preferred Delivery Time *</label>
-												<select name="contact[delivery_time]" class="form-control pointer required">
-													<option value="">--- Select ---</option>
-													<option value="Marketing">Between 7h30AM to 10h30AM.</option>
-													<option value="Developer">Between 1h30PM to 4h30PM.</option>
-													<option value="php">Between 6h30PM to 9h30PM.</option>
-												</select>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-12 col-sm-12">
-												<label>Message</label>
-												<textarea name="contact[message]" rows="4" class="form-control" placeholder="Paste here your grocery list or any specifications you might have concerning the groceries or the delivery." style="font-size: 0.8em;"></textarea>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<label>
-													File Attachment 
-													<small class="text-muted">Upload your grocery list or pictures of desired items!</small>
-												</label>
-
-												<!-- custom file upload -->
-												<input class="custom-file-upload" name="contact[attachment]" type="file" id="file" data-btn-text="Select a File" />
-												<small class="text-muted block">Max file size: 10Mb</small>
-
-											</div>
-										</div>
-
-									</fieldset>
-
-									<div class="row">
-										<div class="col-md-12">
-											<button type="submit" class="btn btn-3d btn-primary btn-xlg btn-block mt-30">
-												SEND FORM
-											</button>
-										</div>
-									</div>
-
-								</form>
-
-
-							</div>
-
-						</div>
-
-					</div>
+				<div class="text-center">
+					<h1>Welcome! World Of <span>Smarty</span>.</h1>
+					<h2 class="col-sm-10 offset-sm-1 mb-0 fw-400">Clean, fully responsive, extemly flexible multipurpose
+						template that allows you to create any website you like.</h2>
 				</div>
 
 			</div>
 		</section>
+		<!-- Welcome -->
 
-		<!-- Footer -->
-        <footer>
-        	<div class="footer-top">
-		        <div class="container">
-		        	<div class="row">
-		        		<div class="col-md-3 footer-about wow fadeInUp">
-		        			<h3>About me</h3>
-		        			<p>
-		        				My name is Kevin and I'll do your groceries. Stay home, safe with the people you love & care for. 
-		        			</p>
-	                    </div>
-		        		<div class="col-md-4 offset-md-1 footer-contact wow fadeInDown">
-		        			<h3>Contact</h3>
-		                	<p><i class="fas fa-map-marker-alt"></i> Montreal, Quebec, Canada</p>
-		                	<p><i class="fas fa-phone"></i> Phone: (514)717-1022</p>
-		                	<p><i class="fas fa-envelope"></i> Email: <a href="mailto:foodshopper@hotmail.com">foodshopper@hotmail.com</a></p>
-	                    </div>
-	                    <div class="col-md-4 footer-links wow fadeInUp">
-	                    	<div class="row">
-	                    		<div class="col">
-	                    			<h3>Links</h3>
-	                    		</div>
-	                    	</div>
-	                    	<div class="row">
-	                    		<div class="col-md-6">
-	                    			<p><a class="scroll-link" href="#">Home</a></p>
-	                    			<p><a href="#steps">How it works</a></p>
-	                    			<p><a href="#pricing">Pricing</a></p>
-	                    		</div>
-	                    	</div>
-	                    </div>
-		            </div>
-		        </div>
+
+		<!-- CALLOUT -->
+		<div class="callout callout-theme-color">
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-md-9">
+						<!-- title + shortdesc -->
+						<h3>Want to be part of our team?</h3>
+						<p>If so, click to join now, and be part of our dynamic team!</p>
+					</div>
+
+					<div class="col-md-3">
+						<!-- button -->
+						<a href="page-careers.html" class="btn btn-primary btn-lg">Join Our Team</a>
+					</div>
+
+				</div>
+
 			</div>
-			
-	        <!-- <div class="footer-bottom">
-	        	<div class="container">
-	        		<div class="row">
-	           			<div class="col footer-social">
-	                    	<a href="#"><i class="fab fa-facebook-f"></i></a> 
-							<a href="#"><i class="fab fa-twitter"></i></a> 
-							<a href="#"><i class="fab fa-google-plus-g"></i></a> 
-							<a href="#"><i class="fab fa-instagram"></i></a> 
-							<a href="#"><i class="fab fa-pinterest"></i></a>
-	                    </div>
-	           		</div>
-	        	</div>
-	        </div> -->
-        </footer>
-
-		
-		<!-- /wrapper -->
+		</div>
+		<!-- /CALLOUT -->
 
 
-		<!-- SCROLL TO TOP -->
-		<a href="#" id="toTop"></a>
 
+		<!-- SERVICES -->
+		<section id="services">
+			<div class="container">
 
-		<!-- PRELOADER -->
-		<div id="preloader">
-			<div class="inner">
-				<span class="loader"></span>
+				<header class="text-center mb-60">
+					<h2>Our Services</h2>
+					<p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p>
+					<hr />
+				</header>
+
+				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque
+					eget diam posuere porta. Quisque ut nulla at nunc vehicula lacinia. Proin adipiscing porta tellus,
+					ut feugiat nibh adipiscing sit amet.</p>
+
+				<div class="divider divider-center divider-color">
+					<!-- divider -->
+					<i class="fa fa-chevron-down"></i>
+				</div>
+
+				<!-- FEATURED BOXES 3 -->
+				<div class="row">
+
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<i class="ico-color ico-lg ico-rounded ico-hover et-circle-compass"></i>
+							<h4>Web Design</h4>
+							<p class="font-lato fs-20">Donec id elit non mi porta gravida.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<i class="ico-color ico-lg ico-rounded ico-hover et-piechart"></i>
+							<h4>Web Analytics</h4>
+							<p class="font-lato fs-20">Donec id elit non mi porta gravida.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<i class="ico-color ico-lg ico-rounded ico-hover et-strategy"></i>
+							<h4>Development</h4>
+							<p class="font-lato fs-20">Donec id elit non mi porta gravida.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<i class="ico-color ico-lg ico-rounded ico-hover et-streetsign"></i>
+							<h4>Marketing</h4>
+							<p class="font-lato fs-20">Donec id elit non mi porta gravida.</p>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<i class="ico-color ico-lg ico-rounded ico-hover et-trophy"></i>
+							<h4>Sales Booster</h4>
+							<p class="font-lato fs-20">Donec id elit non mi porta gravida.</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-6">
+						<div class="text-center">
+							<i class="ico-color ico-lg ico-rounded ico-hover et-tools"></i>
+							<h4>Design</h4>
+							<p class="font-lato fs-20">Donec id elit non mi porta gravida.</p>
+						</div>
+					</div>
+
+				</div>
+				<!-- /FEATURED BOXES 3 -->
+
 			</div>
-		</div><!-- /PRELOADER -->
+		</section>
+		<!-- /SERVICES -->
 
 
-		<!-- JAVASCRIPT FILES -->
-		<script>var plugin_path = 'assets/plugins/';</script>
-		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
-		<script src="assets/js/scripts.js"></script>
-		
-		<!-- SWIPER SLIDER -->
-		<script src="assets/plugins/slider.swiper/dist/js/swiper.min.js"></script>
-		<script src="assets/js/view/demo.swiper_slider.js"></script>
-	</body>
+		<!-- PRICING -->
+		<section id="pricing">
+			<div class="container">
+
+				<header class="text-center mb-60">
+					<h2>Our Pricing</h2>
+					<p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p>
+					<hr />
+				</header>
+
+				<div class="row">
+
+					<div class="col-md-3 col-sm-3">
+
+						<div class="price-clean">
+							<h4>
+								<sup>$</sup>15<em>/month</em>
+							</h4>
+							<h5> Starter </h5>
+							<hr />
+							<p>For individuals looking for something simple to get started.</p>
+							<hr />
+							<a href="#" class="btn btn-3d btn-teal">Learn More</a>
+						</div>
+
+					</div>
+
+					<div class="col-md-3 col-sm-3">
+
+						<div class="price-clean">
+							<h4>
+								<sup>$</sup>25<em>/month</em>
+							</h4>
+							<h5> BUSINESS </h5>
+							<hr />
+							<p>For individuals looking for something simple to get started.</p>
+							<hr />
+							<a href="#" class="btn btn-3d btn-teal">Learn More</a>
+						</div>
+
+					</div>
+
+					<div class="col-md-3 col-sm-3">
+
+						<div class="price-clean price-clean-popular">
+							<div class="ribbon">
+								<div class="ribbon-inner">POPULAR</div>
+							</div>
+
+							<h4>
+								<sup>$</sup>35<em>/month</em>
+							</h4>
+							<h5> DEVELOPER </h5>
+							<hr />
+							<p>For individuals looking for something simple to get started.</p>
+							<hr />
+							<a href="#" class="btn btn-3d btn-primary">Learn More</a>
+						</div>
+
+					</div>
+
+					<div class="col-md-3 col-sm-3">
+
+						<div class="price-clean">
+							<h4>
+								<sup>$</sup>50<em>/month</em>
+							</h4>
+							<h5> VIP </h5>
+							<hr />
+							<p>For individuals looking for something simple to get started.</p>
+							<hr />
+							<a href="#" class="btn btn-3d btn-teal">Learn More</a>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- /PRICING -->
+
+
+
+		<!-- PARALLAX -->
+		<section class="parallax parallax-2" style="background-image: url('assets/images/social_banner.jpg');">
+			<div class="overlay dark-8">
+				<!-- dark overlay [1 to 9 opacity] -->
+			</div>
+
+			<div class="container text-center">
+
+				<div>
+					<h3 class="m-0">Stay Connected</h3>
+					<p class="font-lato fw-300 lead mt-0">Never miss a signal or analysis and exchange with other traders.</p>
+				</div>
+
+				<ul class="mt-80 social-icons list-unstyled list-inline">
+					<li>
+						<a target="_blank" href="#">
+							<i class="fa fa-facebook"></i>
+							<h4>Facebook</h4>
+							<span>Community & Trade Ideas</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="#">
+							<i class="fa fa-twitter"></i>
+							<h4>Twitter</h4>
+							<span>Signals & Economic Data Release</span>
+						</a>
+					</li>
+					<!-- <li>
+						<a target="_blank" href="#">
+							<i class="fa fa-youtube"></i>
+							<h4>Youtube</h4>
+							<span>Tutorials & Analysis</span>
+						</a>
+					</li> -->
+					<li>
+						<a target="_blank" href="#">
+							<i class="fa fa-instagram"></i>
+							<h4>Instagram</h4>
+							<span>Signals, News, Analysis, Tips</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="#">
+							<i class="fa fa-telegram"></i>
+							<h4>Instagram</h4>
+							<span>Signals, Analysis</span>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="#">
+							<i class="fa fa-video-camera"></i>
+							<h4>Video Conference</h4>
+							<span>Private mentoring: Top Down Analysis, Risk Management, Psychology </span>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</section>
+		<!-- /PARALLAX -->
+
+
+
+		<!-- TESTIMONIALS -->
+		<section id="testimonials" class="alternate">
+			<div class="container">
+
+				<header class="text-center mb-60">
+					<h2>Testimonials</h2>
+					<p class="lead font-lato">Look what others have to say!</p>
+					<hr />
+				</header>
+
+				<!-- 
+			Note: remove class="rounded" from the img for squared image!
+		-->
+				<div class="row mb-60">
+					<div class="col-md-4">
+						<div class="testimonial p-15">
+							<figure class="float-left">
+								<img class="rounded" src="demo_files/images/people/300x300/2-min.jpg" alt="" />
+							</figure>
+							<div class="testimonial-content">
+								<p>Good signals bruh</p>
+								<cite>
+									Felicia Doe
+									<span>Company Ltd.</span>
+								</cite>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="testimonial p-15">
+							<figure class="float-left">
+								<img class="rounded" src="demo_files/images/people/300x300/1-min.jpg" alt="" />
+							</figure>
+							<div class="testimonial-content">
+								<p>I profitable thanks to you bruh</p>
+								<cite>
+									Joana Doe
+									<span>Company Ltd.</span>
+								</cite>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="testimonial p-15">
+							<figure class="float-left">
+								<img class="rounded" src="demo_files/images/people/300x300/6-min.jpg" alt="" />
+							</figure>
+							<div class="testimonial-content">
+								<p>Good signals bruh</p>
+								<cite>
+									Melissa Doe
+									<span>Company Ltd.</span>
+								</cite>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 
+			Note: remove class="rounded" from the img for squared image!
+		-->
+				<!-- <ul class="row clearfix testimonial-dotted list-unstyled">
+					<li class="col-md-4">
+						<div class="testimonial">
+							<figure class="float-left">
+								<img class="rounded" src="demo_files/images/people/300x300/2-min.jpg" alt="" />
+							</figure>
+							<div class="testimonial-content">
+								<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum
+									libero illo rerum!</p>
+								<cite>
+									Joana Doe
+									<span>Company Ltd.</span>
+								</cite>
+							</div>
+						</div>
+					</li>
+					<li class="col-md-4">
+						<div class="testimonial">
+							<figure class="float-left">
+								<img class="rounded" src="demo_files/images/people/300x300/6-min.jpg" alt="" />
+							</figure>
+							<div class="testimonial-content">
+								<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum
+									libero illo rerum!</p>
+								<cite>
+									Melissa Doe
+									<span>Company Ltd.</span>
+								</cite>
+							</div>
+						</div>
+					</li>
+					<li class="col-md-4">
+						<div class="testimonial">
+							<figure class="float-left">
+								<img class="rounded" src="demo_files/images/people/300x300/7-min.jpg" alt="" />
+							</figure>
+							<div class="testimonial-content">
+								<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum
+									libero illo rerum!</p>
+								<cite>
+									Stephany Doe
+									<span>Company Ltd.</span>
+								</cite>
+							</div>
+						</div>
+					</li>
+					<li class="col-md-4">
+						<div class="testimonial">
+							<figure class="float-left">
+								<img class="rounded" src="demo_files/images/people/300x300/8-min.jpg" alt="" />
+							</figure>
+							<div class="testimonial-content">
+								<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum
+									libero illo rerum!</p>
+								<cite>
+									Pamela Doe
+									<span>Company Ltd.</span>
+								</cite>
+							</div>
+						</div>
+					</li>
+					<li class="col-md-4">
+						<div class="testimonial">
+							<figure class="float-left">
+								<img class="rounded" src="demo_files/images/people/300x300/11-min.jpg" alt="" />
+							</figure>
+							<div class="testimonial-content">
+								<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum
+									libero illo rerum!</p>
+								<cite>
+									Simina Doe
+									<span>Company Ltd.</span>
+								</cite>
+							</div>
+						</div>
+					</li>
+					<li class="col-md-4">
+						<div class="testimonial">
+							<figure class="float-left">
+								<img class="rounded" src="demo_files/images/people/300x300/12-min.jpg" alt="" />
+							</figure>
+							<div class="testimonial-content">
+								<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum
+									libero illo rerum!</p>
+								<cite>
+									Mihaela Doe
+									<span>Company Ltd.</span>
+								</cite>
+							</div>
+						</div>
+					</li>
+				</ul> -->
+
+			</div>
+		</section>
+		<!-- /TESTIMONIALS -->
+
+
+		<!-- CALLOUT -->
+		<div class="alert alert-transparent bordered-bottom m-0">
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-md-9 col-sm-12">
+						<!-- left text -->
+						<h3>Call now at <span><strong>+800-565-2390</strong></span> and get 15% discount!</h3>
+						<p class="font-lato fw-300 fs-20 mb-0">
+							We truly care about our users and our product.
+						</p>
+					</div><!-- /left text -->
+
+
+					<div class="col-md-3 col-sm-12 text-right">
+						<!-- right btn -->
+						<a href="#purchase" rel="nofollow" target="_blank" class="btn btn-primary btn-lg">PURCHASE
+							NOW</a>
+					</div><!-- /right btn -->
+
+				</div>
+
+			</div>
+		</div>
+		<!-- /CALLOUT -->
+
+
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-md-3">
+						<!-- Footer Logo -->
+						<img class="footer-logo" src="assets/images/_smarty/logo-footer.png" alt="" />
+
+						<!-- Small Description -->
+						<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+						<!-- Contact Address -->
+						<address>
+							<ul class="list-unstyled">
+								<li class="footer-sprite address">
+									PO Box 21132<br>
+									Here Weare St, Melbourne<br>
+									Vivas 2355 Australia<br>
+								</li>
+								<li class="footer-sprite phone">
+									Phone: 1-800-565-2390
+								</li>
+								<li class="footer-sprite email">
+									<a href="mailto:support@yourname.com">support@yourname.com</a>
+								</li>
+							</ul>
+						</address>
+						<!-- /Contact Address -->
+
+					</div>
+
+					<div class="col-md-3">
+
+						<!-- Latest Blog Post -->
+						<h4 class="letter-spacing-1">LATEST NEWS</h4>
+						<ul class="footer-posts list-unstyled">
+							<li>
+								<a href="#">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue</a>
+								<small>29 June 2017</small>
+							</li>
+							<li>
+								<a href="#">Nullam id dolor id nibh ultricies</a>
+								<small>29 June 2017</small>
+							</li>
+							<li>
+								<a href="#">Duis mollis, est non commodo luctus</a>
+								<small>29 June 2017</small>
+							</li>
+						</ul>
+						<!-- /Latest Blog Post -->
+
+					</div>
+
+					<div class="col-md-2">
+
+						<!-- Links -->
+						<h4 class="letter-spacing-1">EXPLORE SMARTY</h4>
+						<ul class="footer-links list-unstyled">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Our Services</a></li>
+							<li><a href="#">Our Clients</a></li>
+							<li><a href="#">Our Pricing</a></li>
+							<li><a href="#">Smarty Tour</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+						<!-- /Links -->
+
+					</div>
+
+					<div class="col-md-4">
+
+						<!-- Newsletter Form -->
+						<h4 class="letter-spacing-1">KEEP IN TOUCH</h4>
+						<p>Subscribe to Our Newsletter to get Important News &amp; Offers</p>
+
+						<form class="validate" action="php/newsletter.php" method="post"
+							data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+								<input type="email" id="email" name="email" class="form-control required"
+									placeholder="Enter your Email">
+								<span class="input-group-btn">
+									<button class="btn btn-success" type="submit">Subscribe</button>
+								</span>
+							</div>
+						</form>
+						<!-- /Newsletter Form -->
+
+						<!-- Social Icons -->
+						<div class="mt-20">
+							<a href="#" class="social-icon social-icon-border social-facebook float-left"
+								data-toggle="tooltip" data-placement="top" title="Facebook">
+
+								<i class="icon-facebook"></i>
+								<i class="icon-facebook"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-border social-twitter float-left"
+								data-toggle="tooltip" data-placement="top" title="Twitter">
+								<i class="icon-twitter"></i>
+								<i class="icon-twitter"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-border social-gplus float-left"
+								data-toggle="tooltip" data-placement="top" title="Google plus">
+								<i class="icon-gplus"></i>
+								<i class="icon-gplus"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-border social-linkedin float-left"
+								data-toggle="tooltip" data-placement="top" title="Linkedin">
+								<i class="icon-linkedin"></i>
+								<i class="icon-linkedin"></i>
+							</a>
+
+							<a href="#" class="social-icon social-icon-border social-rss float-left"
+								data-toggle="tooltip" data-placement="top" title="Rss">
+								<i class="icon-rss"></i>
+								<i class="icon-rss"></i>
+							</a>
+
+						</div>
+						<!-- /Social Icons -->
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="copyright">
+				<div class="container">
+					<ul class="float-right m-0 list-inline mobile-block">
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li>&bull;</li>
+						<li><a href="#">Privacy</a></li>
+					</ul>
+					&copy; All Rights Reserved, Company LTD
+				</div>
+				<div>Icons made by <a href="https://www.flaticon.com/authors/mynamepong"
+						title="mynamepong">mynamepong</a> from <a href="https://www.flaticon.com/"
+						title="Flaticon">www.flaticon.com</a></div>
+			</div>
+		</footer>
+		<!-- /FOOTER -->
+
+	</div>
+	<!-- /wrapper -->
+
+
+	<!-- SCROLL TO TOP -->
+	<a href="#" id="toTop"></a>
+
+
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="inner">
+			<span class="loader"></span>
+		</div>
+	</div><!-- /PRELOADER -->
+
+
+	<!-- JAVASCRIPT FILES -->
+	<script>var plugin_path = 'assets/plugins/';</script>
+	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+	<script src="assets/js/scripts.js"></script>
+
+	<!-- PARTICLE EFFECT -->
+	<script src="assets/plugins/effects/canvas.particles.js"></script>
+</body>
+
 </html>
